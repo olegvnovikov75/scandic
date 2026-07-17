@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Полное родословное древо скандинавской мифологии - боги асы и ваны, герои викингов, легенды и саги">
+    <meta name="keywords" content="скандинавская мифология, боги, викинги, асгард, иггдрасиль, рагнарёк">
+    <title>⚡ Скандинавская Мифология - Полное Древо Богов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="nav-menu">
+        <h3>📚 Навигация</h3>
+        <a href="#home">🏠 Главная</a>
+        <a href="#worlds">🌍 Девять Миров</a>
+        <a href="#ases">⚔️ Асы</a>
+        <a href="#vans">🌾 Ваны</a>
+        <a href="#giants">🧊 Великаны</a>
+        <a href="#other">🐉 Другие</a>
+        <a href="literature.html">📖 Источники</a>
+        <a href="about.html">ℹ️ О проекте</a>
+    </div>
+
+    <div class="container">
+        <header id="home">
+            <h1>🌳 Yggdrasill</h1>
+            <p class="subtitle">Родословное древо скандинавской мифологии</p>
+            <p style="margin-top: 20px; font-size: 1em; opacity: 0.8;">Полная энциклопедия богов, великанов и мифических существ из мира Асгарда</p>
+        </header>
+
+        <!-- ДЕВЯТЬ МИРОВ -->
+        <div class="section" id="worlds">
+            <div class="worlds-section">
+                <h2>🌍 Девять Миров Космологии Иггдрасиля</h2>
+                <p class="worlds-description">Вселенная разделена на девять миров, связанных мировым древом Иггдрасилем</p>
+
+                <!-- Interactive world row with side panel -->
+                <div class="worlds-wrapper" style="position:relative; background-image: url('images/tree-placeholder.svg'); background-size: cover; background-position: center top; padding: 30px; border-radius: 12px;">
+                    <div class="world-list" role="list">
+                        <!-- Asgard -->
+                        <div class="world-card small" data-world="Asgard">
+                            <a href="world-asgard.html" class="world-link"><div class="world-icon">🏰</div><strong>Ásgarðr</strong></a>
+                            <div class="world-desc">Асгард - мир богов-асов</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/odin.svg" alt="Odin"><a href="family-odin.html">Óðinn</a></div>
+                                <div class="char-item"><img src="images/thor.svg" alt="Thor"><a href="family-thor.html">Thor</a></div>
+                                <div class="char-item"><img src="images/loki.svg" alt="Loki"><a href="family-loki.html">Loki</a></div>
+                                <div class="char-item"><img src="images/freyr.svg" alt="Freyr"><a href="family-freyr.html">Freyr</a></div>
+                                <div class="char-item"><img src="images/freyja.svg" alt="Freyja"><a href="family-freyja.html">Freyja</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Vanaheim -->
+                        <div class="world-card small" data-world="Vanaheim">
+                            <a href="world-vanaheim.html" class="world-link"><div class="world-icon">🌾</div><strong>Vanaheimr</strong></a>
+                            <div class="world-desc">Ванахейм - мир богов-ванов</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/freyr.svg" alt="Freyr"><a href="family-freyr.html">Freyr</a></div>
+                                <div class="char-item"><img src="images/freyja.svg" alt="Freyja"><a href="family-freyja.html">Freyja</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Midgard -->
+                        <div class="world-card small" data-world="Midgard">
+                            <a href="world-midgard.html" class="world-link"><div class="world-icon">👥</div><strong>Miðgarðr</strong></a>
+                            <div class="world-desc">Мидгард - мир людей</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/yimir.svg" alt="Ymir"><a href="family-yimir.html">Ymir</a></div>
+                                <div class="char-item"><img src="images/mimir.svg" alt="Mimir"><a href="family-mimir.html">Mímir</a></div>
+                                <div class="char-item"><img src="images/heimdall.svg" alt="Heimdall"><a href="family-heimdall.html">Heimdall</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Jotunheim -->
+                        <div class="world-card small" data-world="Jotunheim">
+                            <a href="world-jotunheim.html" class="world-link"><div class="world-icon">🧊</div><strong>Jötunheimr</strong></a>
+                            <div class="world-desc">Ётунхейм - мир великанов</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/yimir.svg" alt="Ymir"><a href="family-yimir.html">Ymir</a></div>
+                                <div class="char-item"><img src="images/angrboda.svg" alt="Angrboda"><a href="family-angrboda.html">Angrboða</a></div>
+                                <div class="char-item"><img src="images/skadi.svg" alt="Skadi"><a href="family-skadi.html">Skadi</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Muspelheim -->
+                        <div class="world-card small" data-world="Muspelheim">
+                            <a href="world-muspelheim.html" class="world-link"><div class="world-icon">🔥</div><strong>Múspellsheimr</strong></a>
+                            <div class="world-desc">Муспельхейм - мир огня</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/magni.svg" alt="Magni"><a href="family-magni.html">Magni</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Niflheim -->
+                        <div class="world-card small" data-world="Niflheim">
+                            <a href="world-niflheim.html" class="world-link"><div class="world-icon">❄️</div><strong>Niflheimr</strong></a>
+                            <div class="world-desc">Нифльхейм - мир льда</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/hel.svg" alt="Hel"><a href="family-hel.html">Hel</a></div>
+                                <div class="char-item"><img src="images/audumbla.svg" alt="Audumbla"><a href="family-audumbla.html">Auðumbla</a></div>
+                                <div class="char-item"><img src="images/buri.svg" alt="Buri"><a href="family-buri.html">Búri</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Helheim -->
+                        <div class="world-card small" data-world="Helheim">
+                            <a href="world-helheim.html" class="world-link"><div class="world-icon">💀</div><strong>Helheimr</strong></a>
+                            <div class="world-desc">Хельхейм - мир мёртвых</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/hel.svg" alt="Hel"><a href="family-hel.html">Hel</a></div>
+                                <div class="char-item"><img src="images/baldr.svg" alt="Baldr"><a href="family-baldr.html">Baldr</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Yggdrasill -->
+                        <div class="world-card small" data-world="Yggdrasill">
+                            <a href="world-yggdrasill.html" class="world-link"><div class="world-icon">🌳</div><strong>Yggdrasill</strong></a>
+                            <div class="world-desc">Иггдрасиль - мировое древо</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/odin.svg" alt="Odin"><a href="family-odin.html">Óðinn</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Unknown -->
+                        <div class="world-card small" data-world="Unknown">
+                            <div class="world-icon">❔</div><strong>Неизвестно</strong>
+                            <div class="world-desc">Персонажи с неизвестным местом</div>
+                            <div class="chars-hidden" style="display:none;">
+                                <div class="char-item"><img src="images/borr.svg" alt="Borr"><a href="family-borr.html">Borr</a></div>
+                                <div class="char-item"><img src="images/vili.svg" alt="Vili"><a href="family-vili.html">Vili</a></div>
+                                <div class="char-item"><img src="images/ve.svg" alt="Ve"><a href="family-ve.html">Vé</a></div>
+                                <div class="char-item"><img src="images/mimir.svg" alt="Mimir"><a href="family-mimir.html">Mímir</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="world-panel" aria-live="polite">
+                        <h3 id="panel-title">Выберите мир</h3>
+                        <div id="panel-list">Наведите курсор на мир, чтобы увидеть его жителей</div>
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- АСГАРДСКАЯ ИЕРАРХИЯ -->
+        <div class="section" id="ases">
+            <h2 class="section-title">⚔️ Асы - Боги Асгарда</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em;">
+                Высшие боги, правящие миром из древнего священного города Асгарда
+            </p>
+
+            <div class="family-tree">
+                <!-- Auto-generated cards start -->
+                <!-- Cards generated from Scandic.txt -->
+                <div class="family-card">
+                    <a href="family-buri.html" class="character-name">Búri (Buri)<span class="russian-name">Первый предок асов</span></a>
+                    <div class="character-image"><img src="images/buri.svg" alt="Buri" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-audumbla.html" class="character-name">Auðumbla<span class="russian-name">Питавшаяся солью корова</span></a>
+                    <div class="character-image"><img src="images/audumbla.svg" alt="Audumbla" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-yimir.html" class="character-name">Ymir (Имир)<span class="russian-name">Первый великан</span></a>
+                    <div class="character-image"><img src="images/yimir.svg" alt="Ymir" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-borr.html" class="character-name">Borr (Борр)<span class="russian-name">Отец Одина</span></a>
+                    <div class="character-image"><img src="images/borr.svg" alt="Borr" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-vili.html" class="character-name">Vili<span class="russian-name">Брат Одина</span></a>
+                    <div class="character-image"><img src="images/vili.svg" alt="Vili" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-ve.html" class="character-name">Vé<span class="russian-name">Брат Одина</span></a>
+                    <div class="character-image"><img src="images/ve.svg" alt="Vé" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-odin.html" class="character-name">Óðinn (Один)<span class="russian-name">Глава асов</span></a>
+                    <div class="character-image"><img src="images/odin.svg" alt="Odin" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-thor.html" class="character-name">Thor (Þórr)<span class="russian-name">Бог грома</span></a>
+                    <div class="character-image"><img src="images/thor.svg" alt="Thor" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-loki.html" class="character-name">Loki<span class="russian-name">Трикстер</span></a>
+                    <div class="character-image"><img src="images/loki.svg" alt="Loki" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-freyja.html" class="character-name">Freyja<span class="russian-name">Богиня любви</span></a>
+                    <div class="character-image"><img src="images/freyja.svg" alt="Freyja" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-freyr.html" class="character-name">Freyr<span class="russian-name">Бог плодородия</span></a>
+                    <div class="character-image"><img src="images/freyr.svg" alt="Freyr" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-hel.html" class="character-name">Hel<span class="russian-name">Владычица Хельхейма</span></a>
+                    <div class="character-image"><img src="images/hel.svg" alt="Hel" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+                </div>
+
+                <!-- Auto-generated cards end -->
+            </div>
+        </div>
+
+        <!-- ВАНЫ -->
+        <div class="section" id="vans">
+            <h2 class="section-title">🌾 Ваны - Боги Плодородия и Природы</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em;">
+                Древние боги плодородия, богатства и магии из Ванахейма
+            </p>
+                            <li>Дарует рыбам богатство</li>
+                            <li>Покровитель мореходов</li>
+                            <li>Отец Фрейи и Фрейра</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ВЕЛИКАНЫ -->
+        <div class="section" id="giants">
+            <h2 class="section-title">🧊 Великаны - Враги Богов</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em;">
+                Могущественные существа хаоса и противоборства в мире Ётунхейма
+            </p>
+
+            <div class="family-tree">
+                <div class="family-card">
+                    <a href="family-ymir.html" class="character-link">Ymir</a>
+                    <span class="russian-name">Имир</span>
+                    <div class="character-image">🗻</div>
+                    <p class="description">Первоначальный великан, из тела которого создан мир</p>
+                    <div class="deeds">
+                        <h3>⚔️ Значение:</h3>
+                        <ul>
+                            <li>Убит богами Одином, Вили и Вё</li>
+                            <li>Тело стало землёй</li>
+                            <li>Кровь - моря и реки</li>
+                            <li>Основа всей Вселенной</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-angrboda.html" class="character-link">Angrboða</a>
+                    <span class="russian-name">Ангрбода</span>
+                    <div class="character-image">👹</div>
+                    <p class="description">Гиганша, мать монстров, враг богов</p>
+                    <div class="deeds">
+                        <h3>⚔️ Дети:</h3>
+                        <ul>
+                            <li>Фенрир - волк хаоса</li>
+                            <li>Ёрмунганд - змей мирового океана</li>
+                            <li>Хель - богиня мёртвых</li>
+                            <li>Враги света в Рагнарёке</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-ran.html" class="character-link">Rán</a>
+                    <span class="russian-name">Ран</span>
+                    <div class="character-image">🌊💀</div>
+                    <p class="description">Богиня морских глубин и утопления</p>
+                    <div class="deeds">
+                        <h3>⚔️ Роль:</h3>
+                        <ul>
+                            <li>Обитает на дне морском</li>
+                            <li>Ловит рыбаков в сеть</li>
+                            <li>Жена Эгира</li>
+                            <li>Символ опасности моря</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ДРУГИЕ СУЩЕСТВА -->
+        <div class="section" id="other">
+            <h2 class="section-title">🐉 Другие Мифические Существа</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em;">
+                Враги и чудовища, которые сыграют роль в конце времён - Рагнарёке
+            </p>
+
+            <div class="family-tree">
+                <div class="family-card">
+                    <a href="family-fenrir.html" class="character-link">Fenrir</a>
+                    <span class="russian-name">Фенрир</span>
+                    <div class="character-image">🐺</div>
+                    <p class="description">Огромный волк, сын Локи, враг Одина</p>
+                    <div class="deeds">
+                        <h3>⚔️ Судьба:</h3>
+                        <ul>
+                            <li>Связан магической цепью</li>
+                            <li>В Рагнарёке разорвёт оковы</li>
+                            <li>Проглотит Одина</li>
+                            <li>Символ хаоса и разрушения</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-jormungandr.html" class="character-link">Jörmungandr</a>
+                    <span class="russian-name">Ёрмунганд</span>
+                    <div class="character-image">🐉</div>
+                    <p class="description">Мировой змей, охватывающий мир своим телом</p>
+                    <div class="deeds">
+                        <h3>⚔️ Легенда:</h3>
+                        <ul>
+                            <li>Выброшен в мировой океан</li>
+                            <li>Растёт, пока не обхватит землю</li>
+                            <li>Убьёт Тора в Рагнарёке</li>
+                            <li>Символ мирового хаоса</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-hel.html" class="character-link">Hel</a>
+                    <span class="russian-name">Хель</span>
+                    <div class="character-image">💀</div>
+                    <p class="description">Богиня мёртвых, правительница Хельхейма</p>
+                    <div class="deeds">
+                        <h3>⚔️ Владычица:</h3>
+                        <ul>
+                            <li>Дочь Локи</li>
+                            <li>Половина живая, половина мёртвая</li>
+                            <li>Не отпустила Бальдра</li>
+                            <li>Правит царством мёртвых</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="family-card">
+                    <a href="family-mimir.html" class="character-link">Mímir</a>
+                    <span class="russian-name">Мимир</span>
+                    <div class="character-image">🧠</div>
+                    <p class="description">Самый мудрый существ, живая голова</p>
+                    <div class="deeds">
+                        <h3>⚔️ Мудрость:</h3>
+                        <ul>
+                            <li>Охраняет колодец мудрости</li>
+                            <li>Один пожертвовал глазом</li>
+                            <li>Советник богов</li>
+                            <li>Символ древней мудрости</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ЛИТЕРАТУРА -->
+        <div style="text-align: center; margin: 80px 0;">
+            <a href="literature.html" class="literature-link">
+                📚 Источники и Литература
+            </a>
+        </div>
+
+        <footer>
+            <p>© 2024 Скандинавская Мифология - Полное Родословное Древо</p>
+            <p style="margin-top: 20px; font-size: 0.9em;">
+                Создано с ❤️ | 
+                <a href="about.html">О проекте</a> | 
+                <a href="contacts.html">Контакты</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

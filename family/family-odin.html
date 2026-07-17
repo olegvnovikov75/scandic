@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óðinn (Один) - Верховный Бог</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: #fff; min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .back-link { display: inline-block; color: #FFD700; text-decoration: none; margin-bottom: 20px; padding: 10px 20px; border: 2px solid #FFD700; border-radius: 5px; }
+        .family-header { text-align: center; padding: 40px 0; border-bottom: 3px solid #FFD700; margin-bottom: 40px; }
+        .family-header h1 { font-size: 2.5em; color: #FFD700; }
+        .character-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; border: 2px solid rgba(255,215,0,0.3); max-width: 800px; margin: 0 auto 30px; }
+        .character-name { font-size: 2em; color: #FFD700; margin-bottom: 10px; }
+        .character-image { width: 100%; height: 300px; background: rgba(0,0,0,0.3); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; font-size: 5em; }
+        .origin-info, .deeds, .spouse-info, .children-section { margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 10px; }
+        .origin-info h3, .deeds h3, .spouse-info h3, .children-section h3 { color: #FFD700; margin-bottom: 15px; font-size: 1.3em; }
+        .deeds li { padding: 8px 0; padding-left: 30px; position: relative; list-style: none; }
+        .deeds li:before { content: "⚔️"; position: absolute; left: 0; }
+        .children-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .child-card { background: rgba(255,215,0,0.1); border: 2px solid rgba(255,215,0,0.4); border-radius: 10px; padding: 20px; transition: transform 0.3s; text-align: center; }
+        .child-card:hover { transform: translateY(-5px); }
+        .child-link { color: #FFD700; text-decoration: none; font-size: 1.5em; display: block; margin-bottom: 10px; }
+        .child-image { width: 100%; height: 150px; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3em; margin: 15px 0; }
+        .sources-section { margin-top: 40px; padding: 20px; background: rgba(255,215,0,0.1); border: 2px solid #FFD700; border-radius: 10px; }
+        .sources-section h3 { color: #FFD700; margin-bottom: 15px; }
+        .sources-section ul { padding-left: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Назад к древу</a>
+        
+        <div class="family-header">
+            <h1>👁️ Óðinn (Один / Водан)</h1>
+            <p>Верховный бог асов, бог войны, мудрости, поэзии и смерти</p>
+        </div>
+        
+        <div class="character-card">
+            <h2 class="character-name">Óðinn (Один)</h2>
+            <div class="character-image">👁️</div>
+            
+            <div class="origin-info">
+                <h3>🧬 Происхождение:</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 10px 0;">👨 <strong>Отец:</strong> Borr (Борр)</li>
+                    <li style="padding: 10px 0;">👩 <strong>Мать:</strong> Bestla (Бестла) — великанша, дочь Bölþorn</li>
+                    <li style="padding: 10px 0;">👥 <strong>Братья:</strong> Vili (Вили) и Vé (Ве)</li>
+                    <li style="padding: 10px 0;">🏰 <strong>Жилище:</strong> Valhǫll (Валгалла) в Ásgarðr</li>
+                </ul>
+            </div>
+
+            <div class="spouse-info">
+                <h3>💍 Супруги и Возлюбленные:</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 10px 0;">👑 <strong>Frigg (Фригг)</strong> — главная супруга, богиня брака</li>
+                    <li style="padding: 10px 0;">🌍 <strong>Jörð (Йорд)</strong> — богиня земли, мать Þórr</li>
+                    <li style="padding: 10px 0;">⚔️ <strong>Rindr (Риндр)</strong> — богиня мести, мать Váli</li>
+                    <li style="padding: 10px 0;">🧊 <strong>Gríðr (Грид)</strong> — великанша, мать Víðarr</li>
+                    <li style="padding: 10px 0;">🌊 <strong>Rán (Ран)</strong> — морская великанша, мать Höðr</li>
+                </ul>
+            </div>
+            
+            <div class="deeds">
+                <h3>⚔️ Великие Деяния:</h3>
+                <ul>
+                    <li>Вместе с братьями Vili и Vé убил великана Ymir и создал 9 миров</li>
+                    <li>Создал первых людей Ask (ясень) и Embla (ильм) из деревьев</li>
+                    <li>Принёс в жертву свой глаз великану Mímir за глоток из источника мудрости</li>
+                    <li>Повис на древе Yggdrasill на 9 дней и ночей, пронзённый копьём, чтобы познать руны</li>
+                    <li>Владеет копьём Gungnir, которое никогда не промахивается</li>
+                    <li>Владеет золотым кольцом Draupnir, с которого каждые 9 дней капает 8 колец</li>
+                    <li>Имеет двух воронов: Huginn (Мысль) и Muninn (Память), которые летают по миру и приносят новости</li>
+                    <li>Имеет двух волков: Geri и Freki</li>
+                    <li>Собирает павших воинов (эйхерьер) в Valhǫll для последней битвы Ragnarök</li>
+                    <li>Погиб в Ragnarök от пасти волка Fenrir, но был отомщён сыном Víðarr</li>
+                </ul>
+            </div>
+
+            <div class="sources-section">
+                <h3>📚 Источники:</h3>
+                <ul>
+                    <li>Младшая Эдда, Видение Гюльви, главы 9-15</li>
+                    <li>Старшая Эдда, Речи Высокого (Hávamál)</li>
+                    <li>Старшая Эдда, Прорицание Вёльвы (Völuspá)</li>
+                    <li>Старшая Эдда, Песнь о Гримнире (Grímnismál)</li>
+                    <li>Сага об Инглингах (Ynglinga saga)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="children-section">
+            <h3>👦 Дети Одина (от разных матерей):</h3>
+        </div>
+        
+        <div class="children-grid">
+            <div class="child-card">
+                <a href="family-baldr.html" class="child-link">Baldr (Бальдр)</a>
+                <div class="child-image">✨</div>
+                <p>От Frigg. Бог света и красоты.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-hod.html" class="child-link">Höðr (Хёд)</a>
+                <div class="child-image">🌑</div>
+                <p>От Frigg/Nanna. Бог тьмы.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-thor.html" class="child-link">Þórr (Тор)</a>
+                <div class="child-image">🔨</div>
+                <p>От Jörð. Бог грома.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-vali.html" class="child-link">Váli (Вали)</a>
+                <div class="child-image">🏹</div>
+                <p>От Rindr. Бог-мститель.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-vidar.html" class="child-link">Víðarr (Видар)</a>
+                <div class="child-image">🤐</div>
+                <p>От Gríðr. Бог мести и молчания.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-hermod.html" class="child-link">Hermóðr (Хермод)</a>
+                <div class="child-image">🏃</div>
+                <p>От Frigg. Вестник богов.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-bragi.html" class="child-link">Bragi (Браги)</a>
+                <div class="child-image">🎭</div>
+                <p>От Frigg/Gunnlöd. Бог поэзии.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-tyr.html" class="child-link">Týr (Тюр)</a>
+                <div class="child-image">⚖️</div>
+                <p>Возможно от Odin. Бог войны.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-ull.html" class="child-link">Ullr (Улль)</a>
+                <div class="child-image">🏹</div>
+                <p>Возможно от Odin. Бог охоты.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-magni.html" class="child-link">Magni (Магни)</a>
+                <div class="child-image">💪</div>
+                <p>От Jörð. Бог силы.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html></code></pre>
+
+<!-- ============================================ -->
+<!-- FAMILY-FRIGG.HTML -->
+<!-- ============================================ -->
+

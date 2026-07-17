@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Страница Не Найдена</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <div class="error-icon">⚔️</div>
+
+        <h1>404</h1>
+        <div class="error-title">Страница Не Найдена</div>
+
+        <p>Похоже, вы попали в земли, неизведанные даже богам...</p>
+
+        <div class="error-description">
+            <p>
+                <strong>🌳 Хеймдаль говорит:</strong>
+                "Путник, ты зашёл не туда. Страница, которую ты ищешь, была стёрта с карт древнего мира. 
+                Может быть, ты неправильно произнёс заклинание (URL), или боги решили скрыть этот путь от твоих глаз."
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="index.html" class="btn primary">🏠 Вернуться в Асгард (На главную)</a>
+            <a href="javascript:history.back()" class="btn">⏪ Вернуться назад</a>
+        </div>
+
+        <div class="buttons" style="margin-top: 20px;">
+            <a href="literature.html" class="btn">📚 Источники</a>
+            <a href="about.html" class="btn">ℹ️ О проекте</a>
+            <a href="contacts.html" class="btn">📧 Контакты</a>
+        </div>
+
+        <div class="mythological-reference">
+            <p>
+                💭 <strong>Интересный факт:</strong> В скандинавской мифологии существует концепция 
+                <strong>Хельхейма</strong> - царства мёртвых. Возможно, эта страница попала именно туда. 
+                К счастью, у тебя есть возможность вернуться в живой мир через магическую ссылку выше!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Генерируем звёзды
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baldr (Бальдр) - Бог Света</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: #fff; min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .back-link { display: inline-block; color: #FFD700; text-decoration: none; margin-bottom: 20px; padding: 10px 20px; border: 2px solid #FFD700; border-radius: 5px; }
+        .family-header { text-align: center; padding: 40px 0; border-bottom: 3px solid #FFD700; margin-bottom: 40px; }
+        .family-header h1 { font-size: 2.5em; color: #FFD700; }
+        .family-main { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .character-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; border: 2px solid rgba(255,215,0,0.3); }
+        .character-name { font-size: 2em; color: #FFD700; margin-bottom: 10px; }
+        .character-image { width: 100%; height: 300px; background: rgba(0,0,0,0.3); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; font-size: 5em; }
+        .deeds, .spouse-info, .children-section { margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 10px; }
+        .deeds h3, .spouse-info h3, .children-section h3 { color: #FFD700; margin-bottom: 15px; font-size: 1.3em; }
+        .deeds li { padding: 8px 0; padding-left: 30px; position: relative; list-style: none; }
+        .deeds li:before { content: "⚔️"; position: absolute; left: 0; }
+        .children-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .child-card { background: rgba(255,215,0,0.1); border: 2px solid rgba(255,215,0,0.4); border-radius: 10px; padding: 20px; transition: transform 0.3s; text-align: center; }
+        .child-card:hover { transform: translateY(-5px); }
+        .child-link { color: #FFD700; text-decoration: none; font-size: 1.5em; display: block; margin-bottom: 10px; }
+        .child-image { width: 100%; height: 150px; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3em; margin: 15px 0; }
+        .sources-section { margin-top: 40px; padding: 20px; background: rgba(255,215,0,0.1); border: 2px solid #FFD700; border-radius: 10px; }
+        .sources-section h3 { color: #FFD700; margin-bottom: 15px; }
+        .sources-section ul { padding-left: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Назад к древу</a>
+        
+        <div class="family-header">
+            <h1>✨ Baldr (Бальдр / Бальдер)</h1>
+            <p>Бог света, чистоты, красоты и невинности</p>
+        </div>
+        
+        <div class="family-main">
+            <div class="character-card">
+                <h2 class="character-name">Baldr (Бальдр)</h2>
+                <div class="character-image">☀️</div>
+                
+                <div class="spouse-info">
+                    <h3>💍 Родители:</h3>
+                    <p><strong>Óðinn (Один)</strong> + <strong>Frigg (Фригг)</strong></p>
+                    <h3>💍 Супруга:</h3>
+                    <p><strong>Nanna (Нанна)</strong> — богиня</p>
+                </div>
+                
+                <div class="deeds">
+                    <h3>⚔️ Деяния и Судьба:</h3>
+                    <ul>
+                        <li>Самый любимый и красивый из всех богов</li>
+                        <li>От его лица исходил свет, он был мудр и красноречив</li>
+                        <li>Ему снились вещие сны о своей смерти</li>
+                        <li>Frigg взяла клятвы со всего мира не вредить Baldr (огонь, вода, металлы, камни, деревья, болезни, животные)</li>
+                        <li>Упущена была только омела (mistletoe) — слишком молодая</li>
+                        <li>Боги развлекались, бросая в него предметы (они отскакивали)</li>
+                        <li>Loki дал слепому Höðr ветку омелы и направил его руку</li>
+                        <li>Baldr был убит стрелой из омелы</li>
+                        <li>Его тело сожгли на корабле Hringhorni</li>
+                        <li>Его жена Nanna умерла от горя и была сожжена с ним</li>
+                        <li>Hermóðr спускался в Helheimr просить о его возвращении</li>
+                        <li>Hel согласилась отпустить его, если всё в мире будет плакать по нему</li>
+                        <li>Великанша Þökk (Loki в disguise) отказалась плакать</li>
+                        <li>Baldr останется в Helheimr до Ragnarök</li>
+                        <li>После Ragnarök вернётся в новый мир</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="character-card">
+                <h2 class="character-name">Nanna (Нанна)</h2>
+                <div class="character-image">💔</div>
+                
+                <div class="spouse-info">
+                    <h3>💍 Супруг:</h3>
+                    <p><strong>Baldr (Бальдр)</strong></p>
+                </div>
+                
+                <div class="deeds">
+                    <h3>⚔️ Судьба:</h3>
+                    <ul>
+                        <li>Верная супруга Baldr</li>
+                        <li>Умерла от горя после смерти мужа</li>
+                        <li>Её тело сожжено на погребальном корабле Baldr</li>
+                        <li>В Helheimr воссоединилась с мужем</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="children-section">
+            <h3>👦 Дети:</h3>
+        </div>
+        
+        <div class="children-grid">
+            <div class="child-card">
+                <a href="family-forseti.html" class="child-link">Forseti (Форсети)</a>
+                <div class="child-image">⚖️</div>
+                <p>Бог правосудия и примирения. Разрешал споры.</p>
+            </div>
+        </div>
+
+        <div class="sources-section">
+            <h3>📚 Источники:</h3>
+            <ul>
+                <li>Младшая Эдда, Видение Гюльви, главы 46-49</li>
+                <li>Старшая Эдда, Прорицание Вёльвы</li>
+                <li>Деяния данов (Gesta Danorum), Саксон Грамматик</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html></code></pre>
+
+<!-- ============================================ -->
+<!-- FAMILY-LOKI.HTML -->
+<!-- ============================================ -->
+

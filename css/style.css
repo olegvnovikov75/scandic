@@ -1,0 +1,1003 @@
+/* ========================================
+   SCANDIC — Стили оформления
+   Тёмный Север | Версия 1.0
+   ======================================== */
+
+/* ===== CSS ПЕРЕМЕННЫЕ ===== */
+:root {
+  /* Палитра "Тёмный Север" */
+  --bg-primary: #0A0E14;
+  --bg-secondary: #1A2332;
+  --bg-tertiary: #151d2b;
+  
+  --text-primary: #B8D4E8;
+  --text-secondary: #8B9DBD;
+  --text-muted: #5C6A7E;
+  
+  --accent-gold: #C4A35A;
+  --accent-gold-light: #D4B36A;
+  --accent-gold-dark: #A48B4A;
+  --accent-blood: #8B2500;
+  --accent-fire: #D4722A;
+  --accent-moss: #5C7A52;
+  --accent-wood: #4A3F35;
+  
+  /* Шрифты */
+  --font-heading: 'Cinzel', serif;
+  --font-heading-decorative: 'Cinzel Decorative', serif;
+  --font-body: 'EB Garamond', serif;
+  --font-legend: 'IM Fell English', serif;
+  
+  /* Размеры */
+  --nav-height: 60px;
+  --section-padding: 80px;
+  --container-max: 1200px;
+  --border-radius: 4px;
+  --transition-speed: 0.3s;
+}
+
+/* ===== СБРОС ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 14, 20, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(196, 163, 90, 0.15);
+  transition: background var(--transition-speed);
+}
+
+.nav-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 8px;
+}
+
+.nav-rune {
+  font-size: 1.8em;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  text-shadow: 0 0 10px rgba(196, 163, 90, 0.5);
+}
+
+.nav-name {
+  font-family: var(--font-heading);
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.1em;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-speed);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link:hover {
+  color: var(--accent-gold);
+}
+
+.nav-link .rune {
+  font-size: 1.1em;
+  color: var(--accent-gold);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: all var(--transition-speed);
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.aurora {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg,
+    var(--bg-primary) 0%,
+    #0D1520 20%,
+    #1A2332 40%,
+    #2A3F5F 60%,
+    #4A6A8F 80%,
+    var(--bg-primary) 100%
+  );
+  animation: aurora-move 12s ease-in-out infinite;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes aurora-move {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 40px 24px;
+}
+
+.rune-border-top,
+.rune-border-bottom {
+  font-size: 0.9em;
+  color: var(--accent-gold);
+  letter-spacing: 0.4em;
+  margin: 2em 0;
+  opacity: 0.5;
+  animation: rune-flicker 4s ease-in-out infinite;
+}
+
+.rune-border-bottom {
+  margin: 2em 0 1em;
+}
+
+@keyframes rune-flicker {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+.hero-title {
+  font-family: var(--font-heading-decorative);
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 30px rgba(196, 163, 90, 0.4);
+  margin-bottom: 0.3em;
+}
+
+.title-icon {
+  display: inline-block;
+  margin-right: 0.3em;
+  animation: rune-flicker 3s ease-in-out infinite;
+}
+
+.hero-subtitle {
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 1.2em;
+  color: var(--text-secondary);
+  margin-bottom: 0.5em;
+}
+
+.rune-divider {
+  text-align: center;
+  font-size: 0.85em;
+  color: var(--accent-gold);
+  letter-spacing: 0.4em;
+  margin: 2em 0;
+  opacity: 0.5;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1em 0 2em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: var(--accent-gold-light);
+  box-shadow: 0 0 20px rgba(196, 163, 90, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+}
+
+.btn-outline:hover {
+  background: rgba(196, 163, 90, 0.1);
+  box-shadow: 0 0 20px rgba(196, 163, 90, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ===== СЕКЦИИ ===== */
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+.section-title {
+  font-family: var(--font-heading-decorative);
+  font-size: 2.2em;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-align: center;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.4em;
+  text-shadow: 0 0 20px rgba(196, 163, 90, 0.3);
+}
+
+.section-icon {
+  display: inline-block;
+  margin-right: 0.3em;
+  animation: rune-flicker 3s ease-in-out infinite;
+}
+
+.section-desc {
+  text-align: center;
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--text-secondary);
+  margin-bottom: 2em;
+}
+
+.subsection-title {
+  font-family: var(--font-heading);
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.1em;
+  margin: 3em 0 1.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(196, 163, 90, 0.2);
+}
+
+.sub-icon {
+  display: inline-block;
+  margin-right: 0.3em;
+  color: var(--accent-blood);
+}
+
+/* ===== КАРТОЧКИ БОГОВ ===== */
+.god-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.god-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(196, 163, 90, 0.15);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-speed);
+  cursor: default;
+}
+
+.god-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--accent-blood) 0%,
+    var(--accent-gold) 50%,
+    var(--accent-blood) 100%
+  );
+  opacity: 0.7;
+}
+
+.god-card:hover {
+  border-color: rgba(196, 163, 90, 0.4);
+  box-shadow: 0 4px 20px rgba(196, 163, 90, 0.15);
+  transform: translateY(-3px);
+}
+
+.god-rune {
+  font-size: 2.5em;
+  color: var(--accent-gold);
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 15px rgba(196, 163, 90, 0.4);
+  line-height: 1;
+}
+
+.god-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.2em;
+  letter-spacing: 0.05em;
+}
+
+.god-title {
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 0.95em;
+  color: var(--text-secondary);
+  margin-bottom: 0.8em;
+}
+
+.god-desc {
+  font-size: 0.95em;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+
+.god-attributes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.attr {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 0.8em;
+  font-family: var(--font-heading);
+  color: var(--accent-gold-dark);
+  background: rgba(196, 163, 90, 0.08);
+  border: 1px solid rgba(196, 163, 90, 0.2);
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+/* ===== МИФЫ ===== */
+.myth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.myth-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(196, 163, 90, 0.15);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-speed);
+}
+
+.myth-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--accent-blood) 0%,
+    var(--accent-fire) 50%,
+    var(--accent-blood) 100%
+  );
+  opacity: 0.5;
+}
+
+.myth-card:hover {
+  border-color: rgba(196, 163, 90, 0.3);
+  box-shadow: 0 4px 20px rgba(196, 163, 90, 0.1);
+  transform: translateY(-2px);
+}
+
+.myth-icon {
+  font-size: 2.2em;
+  color: var(--accent-gold);
+  margin-bottom: 0.6em;
+}
+
+.myth-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.6em;
+  letter-spacing: 0.05em;
+}
+
+.myth-card p {
+  font-size: 0.95em;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ===== РУНЫ ===== */
+.runes-section {
+  background: var(--bg-secondary);
+}
+
+.rune-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.rune-cell {
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(196, 163, 90, 0.1);
+  border-radius: var(--border-radius);
+  padding: 20px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.rune-cell:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 15px rgba(196, 163, 90, 0.2);
+  transform: scale(1.05);
+}
+
+.rune-symbol {
+  font-size: 2.8em;
+  color: var(--accent-gold);
+  text-shadow: 0 0 10px rgba(196, 163, 90, 0.3);
+  line-height: 1;
+  transition: all var(--transition-speed);
+}
+
+.rune-cell:hover .rune-symbol {
+  text-shadow: 0 0 20px rgba(196, 163, 90, 0.6);
+}
+
+.rune-name {
+  font-family: var(--font-heading);
+  font-size: 0.8em;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+/* Модальное окно рун */
+.rune-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 14, 20, 0.9);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.rune-modal.active {
+  display: flex;
+}
+
+.rune-modal-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-gold);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 40px rgba(196, 163, 90, 0.2);
+}
+
+.rune-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--accent-gold);
+  font-size: 1.5em;
+  cursor: pointer;
+  font-family: var(--font-heading);
+}
+
+.rune-modal-close:hover {
+  color: var(--accent-gold-light);
+}
+
+.rune-modal-symbol {
+  font-size: 4em;
+  color: var(--accent-gold);
+  text-shadow: 0 0 30px rgba(196, 163, 90, 0.5);
+  margin-bottom: 0.5em;
+}
+
+.rune-modal-name {
+  font-family: var(--font-heading-decorative);
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.5em;
+}
+
+.rune-modal-meaning {
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--text-secondary);
+  margin-bottom: 1.5em;
+}
+
+.rune-modal-attributes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* ===== КОСМОЛОГИЯ ===== */
+.cosmo-visual {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.yggdrasil-container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.yggdrasil-trunk {
+  font-size: 3em;
+  color: var(--accent-wood);
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px rgba(74, 63, 53, 0.5);
+}
+
+.yggdrasil-roots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.root {
+  font-family: var(--font-heading);
+  font-size: 0.85em;
+  color: var(--accent-moss);
+  padding: 6px 16px;
+  border: 1px solid rgba(92, 122, 82, 0.3);
+  border-radius: 2px;
+  background: rgba(92, 122, 82, 0.05);
+  letter-spacing: 0.05em;
+}
+
+.yggdrasil-leaves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.leaf {
+  font-family: var(--font-heading);
+  font-size: 0.85em;
+  color: var(--accent-gold);
+  padding: 6px 16px;
+  border: 1px solid rgba(196, 163, 90, 0.3);
+  border-radius: 2px;
+  background: rgba(196, 163, 90, 0.05);
+  letter-spacing: 0.05em;
+}
+
+.worlds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.world-card {
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(196, 163, 90, 0.1);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  text-align: center;
+  transition: all var(--transition-speed);
+}
+
+.world-card:hover {
+  border-color: rgba(196, 163, 90, 0.3);
+  box-shadow: 0 2px 15px rgba(196, 163, 90, 0.1);
+}
+
+.world-icon {
+  font-size: 2em;
+  color: var(--accent-gold);
+  margin-bottom: 0.5em;
+}
+
+.world-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.4em;
+}
+
+.world-card p {
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ===== САГИ ===== */
+.sagas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.saga-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(196, 163, 90, 0.15);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  position: relative;
+  transition: all var(--transition-speed);
+}
+
+.saga-card:hover {
+  border-color: rgba(196, 163, 90, 0.3);
+  box-shadow: 0 4px 20px rgba(196, 163, 90, 0.1);
+}
+
+.saga-icon {
+  font-size: 2.2em;
+  color: var(--accent-gold);
+  margin-bottom: 0.6em;
+}
+
+.saga-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.4em;
+}
+
+.saga-source {
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-bottom: 0.8em;
+}
+
+.saga-card > p {
+  font-size: 0.95em;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+
+.saga-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.saga-item {
+  font-family: var(--font-heading);
+  font-size: 0.85em;
+  color: var(--accent-gold-dark);
+  padding-left: 16px;
+  position: relative;
+  letter-spacing: 0.03em;
+}
+
+.saga-item::before {
+  content: 'ᚠ';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+  font-size: 0.8em;
+}
+
+/* ===== ГАЛЕРЕЯ ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.gallery-item {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(196, 163, 90, 0.1);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all var(--transition-speed);
+}
+
+.gallery-item:hover {
+  border-color: rgba(196, 163, 90, 0.3);
+  box-shadow: 0 4px 20px rgba(196, 163, 90, 0.1);
+}
+
+.gallery-placeholder {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: var(--accent-gold);
+  background: linear-gradient(135deg,
+    var(--bg-secondary) 0%,
+    var(--bg-tertiary) 100%
+  );
+}
+
+.gallery-item p {
+  padding: 14px;
+  font-family: var(--font-heading);
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid rgba(196, 163, 90, 0.15);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1em;
+}
+
+.footer-rune {
+  font-size: 2em;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+}
+
+.footer-name {
+  font-family: var(--font-heading);
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.1em;
+}
+
+.footer p {
+  font-size: 0.95em;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.footer-copy {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-top: 0.5em;
+}
+
+/* ===== АНИМАЦИИ ===== */
+@keyframes rune-flicker {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes aurora-move {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 0.7; transform: translateY(-10px); }
+}
+
+/* Появление элементов при скролле */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+@media (max-width: 1024px) {
+  .god-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  .myth-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 50px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: rgba(10, 14, 20, 0.98);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(196, 163, 90, 0.15);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .hero-subtitle {
+    font-size: 1em;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 1.7em;
+  }
+
+  .god-grid,
+  .myth-grid,
+  .sagas-grid,
+  .worlds-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rune-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .rune-modal-content {
+    padding: 24px;
+  }
+
+  .rune-modal-symbol {
+    font-size: 3em;
+  }
+
+  .rune-modal-name {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6em;
+    letter-spacing: 0.08em;
+  }
+
+  .section-title {
+    font-size: 1.4em;
+  }
+
+  .god-card {
+    padding: 18px;
+  }
+
+  .rune-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .rune-symbol {
+    font-size: 2.2em;
+  }
+}

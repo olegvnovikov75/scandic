@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Þórr (Тор) - Бог Грома</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: #fff; min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .back-link { display: inline-block; color: #FFD700; text-decoration: none; margin-bottom: 20px; padding: 10px 20px; border: 2px solid #FFD700; border-radius: 5px; }
+        .family-header { text-align: center; padding: 40px 0; border-bottom: 3px solid #FFD700; margin-bottom: 40px; }
+        .family-header h1 { font-size: 2.5em; color: #FFD700; }
+        .character-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; border: 2px solid rgba(255,215,0,0.3); max-width: 800px; margin: 0 auto 30px; }
+        .character-name { font-size: 2em; color: #FFD700; margin-bottom: 10px; }
+        .character-image { width: 100%; height: 300px; background: rgba(0,0,0,0.3); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; font-size: 5em; }
+        .origin-info, .deeds, .spouse-info, .children-section { margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 10px; }
+        .origin-info h3, .deeds h3, .spouse-info h3, .children-section h3 { color: #FFD700; margin-bottom: 15px; font-size: 1.3em; }
+        .deeds li { padding: 8px 0; padding-left: 30px; position: relative; list-style: none; }
+        .deeds li:before { content: "⚔️"; position: absolute; left: 0; }
+        .children-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .child-card { background: rgba(255,215,0,0.1); border: 2px solid rgba(255,215,0,0.4); border-radius: 10px; padding: 20px; transition: transform 0.3s; text-align: center; }
+        .child-card:hover { transform: translateY(-5px); }
+        .child-link { color: #FFD700; text-decoration: none; font-size: 1.5em; display: block; margin-bottom: 10px; }
+        .child-image { width: 100%; height: 150px; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3em; margin: 15px 0; }
+        .sources-section { margin-top: 40px; padding: 20px; background: rgba(255,215,0,0.1); border: 2px solid #FFD700; border-radius: 10px; }
+        .sources-section h3 { color: #FFD700; margin-bottom: 15px; }
+        .sources-section ul { padding-left: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Назад к древу</a>
+        
+        <div class="family-header">
+            <h1>🔨 Þórr (Тор / Донар)</h1>
+            <p>Бог грома, молний, бури и защиты</p>
+        </div>
+        
+        <div class="character-card">
+            <h2 class="character-name">Þórr (Тор)</h2>
+            <div class="character-image">🔨</div>
+            
+            <div class="origin-info">
+                <h3>🧬 Происхождение:</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 10px 0;">👨 <strong>Отец:</strong> Óðinn (Один)</li>
+                    <li style="padding: 10px 0;">👩 <strong>Мать:</strong> Jörð (Йорд) — богиня земли</li>
+                    <li style="padding: 10px 0;">🏰 <strong>Жилище:</strong> Þrúðheimr (Чертог Силы) в Ásgarðr</li>
+                    <li style="padding: 10px 0;">🌉 <strong>Зал:</strong> Bilskirnir (540 комнат)</li>
+                </ul>
+            </div>
+
+            <div class="spouse-info">
+                <h3>💍 Супруга:</h3>
+                <p><strong>Sif (Сиф)</strong> — богиня плодородия, известная золотыми волосами</p>
+                <p style="margin-top: 10px;">🧊 <strong>Возлюбленная:</strong> Járnsaxa (Ярнсаха) — великанша, мать Magni и Móði</p>
+            </div>
+            
+            <div class="deeds">
+                <h3>⚔️ Великие Деяния:</h3>
+                <ul>
+                    <li>Обладатель молота Mjölnir, созданного карликами Brokkr и Eitri</li>
+                    <li>Mjölnir всегда возвращается к Тору после броска</li>
+                    <li>Главный защитник Ásgarðr и Miðgarðr от великанов-ётунов</li>
+                    <li>Победил великана Hrungnir в поединке</li>
+                    <li>Трижды сражался с мировым змеем Jörmungandr:</li>
+                    <ul style="padding-left: 30px; margin-top: 10px;">
+                        <li>Первая встреча: рыбалка с великаном Hymir</li>
+                        <li>Вторая встреча: в Ragnarök</li>
+                    </ul>
+                    <li>Путешествовал в Jötunheimr в disguise (переодетым в Фрейю)</li>
+                    <li>В Ragnarök убил Jörmungandr, но погиб от его яда через 9 шагов</li>
+                    <li>Его сыновья Magni и Móði унаследовали Mjölnir после его смерти</li>
+                    <li>Покровитель простых людей, крестьян и воинов</li>
+                </ul>
+            </div>
+
+            <div class="sources-section">
+                <h3>📚 Источники:</h3>
+                <ul>
+                    <li>Младшая Эдда, Видение Гюльви, главы 20-24</li>
+                    <li>Старшая Эдда, Песнь о Трюме (Þrymskviða)</li>
+                    <li>Старшая Эдда, Песнь о Хюмире (Hymiskviða)</li>
+                    <li>Старшая Эдда, Прорицание Вёльвы</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="children-section">
+            <h3>👦 Дети:</h3>
+        </div>
+        
+        <div class="children-grid">
+            <div class="child-card">
+                <a href="family-magni.html" class="child-link">Magni (Магни)</a>
+                <div class="child-image">💪</div>
+                <p>От Járnsaxa. Бог силы. Пережил Рагнарёк.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-modi.html" class="child-link">Móði (Моди)</a>
+                <div class="child-image">🔥</div>
+                <p>От Járnsaxa. Бог ярости. Пережил Рагнарёк.</p>
+            </div>
+            <div class="child-card">
+                <a href="family-thruth.html" class="child-link">Þrúðr (Труд)</a>
+                <div class="child-image">⚔️</div>
+                <p>От Sif. Богиня силы.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html></code></pre>
+
+<!-- ============================================ -->
+<!-- FAMILY-BALDR.HTML -->
+<!-- ============================================ -->
+

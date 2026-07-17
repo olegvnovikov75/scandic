@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borr (Борр) + Bestla (Бестла)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: #fff; min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .back-link { display: inline-block; color: #FFD700; text-decoration: none; margin-bottom: 20px; padding: 10px 20px; border: 2px solid #FFD700; border-radius: 5px; }
+        .family-header { text-align: center; padding: 40px 0; border-bottom: 3px solid #FFD700; margin-bottom: 40px; }
+        .family-header h1 { font-size: 2.5em; color: #FFD700; }
+        .family-main { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .character-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; border: 2px solid rgba(255,215,0,0.3); }
+        .character-name { font-size: 2em; color: #FFD700; margin-bottom: 10px; }
+        .character-image { width: 100%; height: 300px; background: rgba(0,0,0,0.3); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; font-size: 5em; }
+        .deeds, .spouse-info, .children-section { margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 10px; }
+        .deeds h3, .spouse-info h3, .children-section h3 { color: #FFD700; margin-bottom: 15px; font-size: 1.3em; }
+        .deeds li { padding: 8px 0; padding-left: 30px; position: relative; list-style: none; }
+        .deeds li:before { content: "⚔️"; position: absolute; left: 0; }
+        .children-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .child-card { background: rgba(255,215,0,0.1); border: 2px solid rgba(255,215,0,0.4); border-radius: 10px; padding: 20px; transition: transform 0.3s; text-align: center; }
+        .child-card:hover { transform: translateY(-5px); }
+        .child-link { color: #FFD700; text-decoration: none; font-size: 1.5em; display: block; margin-bottom: 10px; }
+        .child-image { width: 100%; height: 150px; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3em; margin: 15px 0; }
+        .sources-section { margin-top: 40px; padding: 20px; background: rgba(255,215,0,0.1); border: 2px solid #FFD700; border-radius: 10px; }
+        .sources-section h3 { color: #FFD700; margin-bottom: 15px; }
+        .sources-section ul { padding-left: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Назад к древу</a>
+        
+        <div class="family-header">
+            <h1>👥 Borr (Борр) + Bestla (Бестла)</h1>
+            <p>Родители верховных богов-асов</p>
+        </div>
+        
+        <div class="family-main">
+            <div class="character-card">
+                <h2 class="character-name">Borr (Борр / Бёр)</h2>
+                <div class="character-image">👑</div>
+                
+                <div class="spouse-info">
+                    <h3>💍 Супруга:</h3>
+                    <p><strong>Bestla (Бестла)</strong> — дочь великана Bölþorn</p>
+                </div>
+                
+                <div class="deeds">
+                    <h3>⚔️ Деяния:</h3>
+                    <ul>
+                        <li>Сын Búri (Бури) — первого бога-аса</li>
+                        <li>Отец трёх создателей миров</li>
+                        <li>Упоминается в Младшей Эдде</li>
+                        <li>Мало сведений о его жизни и деяниях</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="character-card">
+                <h2 class="character-name">Bestla (Бестла)</h2>
+                <div class="character-image">❄️</div>
+                
+                <div class="spouse-info">
+                    <h3>💍 Супруг:</h3>
+                    <p><strong>Borr (Борр)</strong> — сын Búri</p>
+                </div>
+                
+                <div class="deeds">
+                    <h3>⚔️ Происхождение и Деяния:</h3>
+                    <ul>
+                        <li>Дочь великана <strong>Bölþorn (Бёльторн)</strong></li>
+                        <li>Великанша (Jötunn) по происхождению</li>
+                        <li>Мать трёх создателей миров</li>
+                        <li>Через неё боги-асы имеют кровь великанов</li>
+                        <li>Упоминается в Старшей Эдде (Речи Высокого)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="children-section">
+            <h3>👦 Дети — Создатели Девяти Миров:</h3>
+        </div>
+        
+        <div class="children-grid">
+            <div class="child-card">
+                <a href="family-odin.html" class="child-link">Óðinn (Один)</a>
+                <div class="child-image">👁️</div>
+                <p>Верховный бог, создатель рун, погиб в Рагнарёк</p>
+            </div>
+            <div class="child-card">
+                <a href="family-vili.html" class="child-link">Vili (Вили)</a>
+                <div class="child-image">️</div>
+                <p>Бог разума и воли, со-создатель миров</p>
+            </div>
+            <div class="child-card">
+                <a href="family-ve.html" class="child-link">Vé (Ве)</a>
+                <div class="child-image">🔥</div>
+                <p>Бог священного огня, со-создатель миров</p>
+            </div>
+        </div>
+
+        <div class="sources-section">
+            <h3>📚 Источники:</h3>
+            <ul>
+                <li>Младшая Эдда, Видение Гюльви, глава 6</li>
+                <li>Старшая Эдда, Речи Высокого, строфа 109</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html></code></pre>
+
+<!-- ============================================ -->
+<!-- FAMILY-VILI.HTML -->
+<!-- ============================================ -->
+
