@@ -1451,3 +1451,360 @@ body {
     gap: 12px;
   }
 }
+
+/* ========================================
+   СОВМЕСТИМОСТЬ СО СТАРЫМИ КЛАССАМИ
+   (для плавного перехода всех страниц)
+   ======================================== */
+
+/* === Контейнер === */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === Назад ссылка === */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.95em;
+  color: var(--gold-auric);
+  padding: 10px 20px;
+  border: 1px solid rgba(212, 168, 85, 0.2);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+}
+
+.back-link:hover {
+  background: rgba(212, 168, 85, 0.08);
+  border-color: var(--gold-auric);
+  color: var(--gold-bright);
+}
+
+/* === Хедер === */
+header {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+header h1 {
+  font-family: var(--font-runic);
+  font-size: clamp(2em, 5vw, 3.5em);
+  font-weight: 900;
+  color: var(--gold-bright);
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 30px rgba(240, 200, 96, 0.3);
+  margin-bottom: 0.5em;
+}
+
+header p {
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 1.2em;
+  color: var(--text-mist);
+}
+
+/* === Секции контента === */
+.content-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.content-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6em;
+  font-weight: 700;
+  color: var(--gold-auric);
+  margin: 2em 0 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(212, 168, 85, 0.2);
+  letter-spacing: 0.08em;
+}
+
+.content-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--text-ice);
+  margin: 1.5em 0 0.8em;
+}
+
+.content-section p {
+  color: var(--text-frost);
+  margin-bottom: 1em;
+  line-height: 1.8;
+}
+
+.content-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1em 0;
+}
+
+.content-section li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  color: var(--text-frost);
+  line-height: 1.7;
+}
+
+/* === Сетка фич === */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 1.5em 0;
+}
+
+.feature-card {
+  background: rgba(212, 168, 85, 0.03);
+  border: 1px solid rgba(212, 168, 85, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background: rgba(212, 168, 85, 0.06);
+  border-color: rgba(212, 168, 85, 0.25);
+  transform: translateY(-3px);
+}
+
+.feature-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--gold-auric);
+  margin-bottom: 0.5em;
+}
+
+.feature-card p {
+  font-size: 0.95em;
+  color: var(--text-mist);
+  line-height: 1.6;
+}
+
+/* === Карточки === */
+.card {
+  background: rgba(212, 168, 85, 0.03);
+  border: 1px solid rgba(212, 168, 85, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(212, 168, 85, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-inner {
+  padding: 0;
+}
+
+/* === Сетки === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+/* === Герой для внутренних страниц === */
+.hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: var(--font-runic);
+  font-size: clamp(2em, 5vw, 3.5em);
+  font-weight: 900;
+  color: var(--gold-bright);
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 30px rgba(240, 200, 96, 0.3);
+  margin-bottom: 0.3em;
+}
+
+.hero p {
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 1.2em;
+  color: var(--text-mist);
+}
+
+/* === Кнопки === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-family: var(--font-heading);
+  font-size: 0.95em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--gold-auric);
+  color: var(--bg-deep);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: var(--gold-bright);
+  box-shadow: 0 0 15px rgba(212, 168, 85, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-back {
+  background: transparent;
+  color: var(--gold-auric);
+  border: 1px solid var(--gold-auric);
+}
+
+.btn-back:hover {
+  background: rgba(212, 168, 85, 0.08);
+  transform: translateY(-2px);
+}
+
+/* === Ошибка 404 === */
+.error-title {
+  font-family: var(--font-runic);
+  font-size: clamp(4em, 10vw, 8em);
+  font-weight: 900;
+  color: var(--gold-auric);
+  text-align: center;
+  margin-bottom: 0;
+  text-shadow: 0 0 40px rgba(212, 168, 85, 0.4);
+}
+
+.error-icon {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.error-description {
+  text-align: center;
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 1.3em;
+  color: var(--text-mist);
+  margin-bottom: 2em;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+
+.mythological-reference {
+  text-align: center;
+  font-family: var(--font-legend);
+  font-style: italic;
+  font-size: 1em;
+  color: var(--text-shadow);
+  margin: 2em 0;
+  padding: 20px;
+  border-left: 3px solid rgba(212, 168, 85, 0.3);
+  background: rgba(212, 168, 85, 0.02);
+}
+
+/* === Футер === */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(212, 168, 85, 0.1);
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 0.9em;
+  color: var(--text-mist);
+  line-height: 1.7;
+  margin-bottom: 0.5em;
+}
+
+footer a {
+  color: var(--gold-auric);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--gold-bright);
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 1em 0;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  font-size: 0.85em;
+  color: var(--text-shadow);
+}
+
+/* === Хедер контейнер === */
+.header-container {
+  text-align: center;
+  padding: 100px 20px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Звёзды (для 404) === */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--text-ice);
+  border-radius: 50%;
+  animation: twinkle 3s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.8; }
+}
