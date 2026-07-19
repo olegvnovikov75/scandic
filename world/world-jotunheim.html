@@ -1,19 +1,91 @@
-﻿<!DOCTYPE html>
-<html lang='ru'>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <title>Jotunheim</title>
-  <link rel='stylesheet' href='styles.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Йотунхейм (Jötunheimr) — Обитель великанов Ётунов">
+    <title>Йотунхейм — Скандинавская Мифология</title>
+    <link rel="stylesheet" href="../css/style-new.css">
 </head>
-<body>
-  <div class='container'>
-    <a href='index.html' class='back-link'>← азад</a>
-    <h1>Jotunheim</h1>
-    <div class='character-list'>
-<div class='char-item'><img src='images/fenrir.svg' alt='Fenrir (Фенрир) - Гигантский Волк'><a href='family-fenrir.html'>Fenrir (Фенрир) - Гигантский Волк</a></div>
+<body class="worlds-page-body">
 
+<!-- ===== СЕВЕРНОЕ СИЯНИЕ ===== -->
+<div class="aurora-container">
+    <div class="aurora-layer"></div>
+    <div class="aurora-layer"></div>
+    <div class="aurora-layer"></div>
+    <div class="aurora-curtain"></div>
+</div>
+
+<!-- ===== ЗВЁЗДЫ ===== -->
+<div class="stars" id="stars"></div>
+
+<!-- ===== НАВИГАЦИЯ ===== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="../index.html" class="nav-logo">
+            <span class="nav-rune">ᚱ</span>
+            <span class="nav-name">Scandic</span>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../index.html#worlds" class="nav-link"><span class="rune">☽</span> Миры</a></li>
+            <li><a href="../index.html#pantheons" class="nav-link"><span class="rune">⚡</span> Боги</a></li>
+            <li><a href="../index.html#runes" class="nav-link"><span class="rune">ᚠ</span> Руны</a></li>
+            <li><a href="../index.html#sagas" class="nav-link"><span class="rune">📜</span> Саги</a></li>
+            <li><a href="../literature.html" class="nav-link"><span class="rune">📖</span> Литература</a></li>
+            <li><a href="../about.html" class="nav-link"><span class="rune">ℹ</span> О проекте</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
     </div>
-  </div>
+</nav>
+
+<!-- ===== ЗАГОЛОВОК МИРА ===== -->
+<header class="world-header">
+    <div class="world-header-bg"></div>
+    <h1 class="world-name">
+        <span class="world-name-icon">❄️</span>
+        Йотунхейм
+    </h1>
+    <p class="world-epithet">Jötunheimr — Обитель великанов Ётунов</p>
+    <div class="world-divider"></div>
+</header>
+
+<!-- ===== КОНТЕНТ ===== -->
+<div class="world-content">
+    <p>Йотунхейм — мир великанов, древних существ, часто врагов богов, но также и их предков. Некоторые великаны стали супругами богов и родителями великих героев.</p>
+    
+    <h2>👑 Правитель</h2>
+    <p><strong>Нет единого правителя</strong></p>
+    
+    <h2>📖 О Йотунхейм</h2>
+    <p>Йотунхейм — мир великанов, древних существ, часто врагов богов, но также и их предков. Некоторые великаны стали супругами богов и родителями великих героев.</p>
+    
+    <a href="../index.html" class="back-link">← Назад к древу</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-rune">ᚱ</div>
+        <div class="footer-name">SCANDIC</div>
+        <p>Скандинавская мифология — миры, боги, руны и легенды</p>
+        <p class="footer-copy">© 2026 Scandic.</p>
+    </div>
+</footer>
+
+<script>
+// Навигация
+document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('active');
+});
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+});
+</script>
+
 </body>
 </html>

@@ -1,0 +1,20 @@
+{
+  "description": "Координаты миров на дереве Иггдрасиль (top%, left%)",
+  "note": "Меняй top/left чтобы переместить орбы. 50%50% = центр. top=0% = верх, left=0% = лево",
+  "yggdrasil": {
+    "image": "images/yggdrasil-tree.jpg",
+    "scene_width": "100%",
+    "scene_height": "75vh"
+  },
+  "worlds": {
+    "asgard":       { "top": "12%", "left": "50%", "label": "Асгард", "href": "world/world-asgard.html" },
+    "alfheim":      { "top": "20%", "left": "28%", "label": "Альфхейм", "href": "world/álfheimr.html" },
+    "vanaheim":     { "top": "20%", "left": "72%", "label": "Ванахейм", "href": "world/world-vanaheim.html" },
+    "midgard":      { "top": "33%", "left": "30%", "label": "Мидгард", "href": "world/world-midgard.html" },
+    "jotunheim":    { "top": "33%", "left": "70%", "label": "Йотунхейм", "href": "world/world-jotunheim.html" },
+    "svartalfheim": { "top": "47%", "left": "30%", "label": "Свартальфхейм", "href": "world/svartálfaheimr.html" },
+    "muspelheim":   { "top": "47%", "left": "70%", "label": "Муспельхейм", "href": "world/world-muspelheim.html" },
+    "niflheim":     { "top": "60%", "left": "30%", "label": "Нифльхейм", "href": "world/world-niflheim.html" },
+    "helheim":      { "top": "60%", "left": "70%", "label": "Хельхейм", "href": "world/helheimr.html" }
+  }
+}

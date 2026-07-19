@@ -56,68 +56,8 @@
         <img src="images/yggdrasil-tree.jpg" alt="Иггдрасиль — Мировое Древо" class="yggdrasil-bg">
 
         <!-- ===== МИРЫ-ОРБЫ НА ДЕРЕВЕ ===== -->
-        <!-- ===== МИРЫ-ОРБЫ НА ДЕРЕВЕ (равномерно по ярусам кроны) ===== -->
-        <div class="world-nodes">
-            <!-- Ярус 1: верхушка (1 мир) -->
-            <a href="world/world-asgard.html" class="world-node" data-world="asgard" style="top:12%;left:50%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Асгард</span>
-            </a>
-            <!-- Ярус 2: крона верхняя (2 мира) -->
-            <a href="world/álfheimr.html" class="world-node" data-world="alfheim" style="top:20%;left:28%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Альфхейм</span>
-            </a>
-            <a href="world/world-vanaheim.html" class="world-node" data-world="vanaheim" style="top:20%;left:72%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Ванахейм</span>
-            </a>
-            <!-- Ярус 3: крона средняя (2 мира) -->
-            <a href="world/world-midgard.html" class="world-node" data-world="midgard" style="top:33%;left:30%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Мидгард</span>
-            </a>
-            <a href="world/world-jotunheim.html" class="world-node" data-world="jotunheim" style="top:33%;left:70%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Йотунхейм</span>
-            </a>
-            <!-- Ярус 4: крона нижняя (2 мира) -->
-            <a href="world/svartálfaheimr.html" class="world-node" data-world="svartalfheim" style="top:47%;left:30%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Свартальфхейм</span>
-            </a>
-            <a href="world/world-muspelheim.html" class="world-node" data-world="muspelheim" style="top:47%;left:70%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Муспельхейм</span>
-            </a>
-            <!-- Ярус 5: основание кроны (2 мира) -->
-            <a href="world/world-niflheim.html" class="world-node" data-world="niflheim" style="top:60%;left:30%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Нифльхейм</span>
-            </a>
-            <a href="world/helheimr.html" class="world-node" data-world="helheim" style="top:60%;left:70%;">
-                <div class="world-circle">
-                    <div class="world-circle-inner"></div>
-                </div>
-                <span class="world-label">Хельхейм</span>
-            </a>
-        </div>
+        <!-- Орбы генерируются из config/orb-positions.json -->
+        <div class="world-nodes" id="worldNodes"></div>
     </div>
 </section>
 
@@ -126,43 +66,8 @@
     <h2 class="section-title">⚹ Миры Мира ⚹</h2>
     <p class="section-subtitle">Девять миров, связанных Иггдрасилем</p>
     
-    <div class="orbs-grid">
-        <a href="world/world-asgard.html" class="world-orb" data-orb="ases">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Асгард</span>
-        </a>
-        <a href="world/world-vanaheim.html" class="world-orb" data-orb="vanir">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Ванахейм</span>
-        </a>
-        <a href="world/world-midgard.html" class="world-orb" data-orb="midgard">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Мидгард</span>
-        </a>
-        <a href="world/world-jotunheim.html" class="world-orb" data-orb="jotun">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Йотунхейм</span>
-        </a>
-        <a href="world/álfheimr.html" class="world-orb" data-orb="light-alves">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Альфхейм</span>
-        </a>
-        <a href="world/svartálfaheimr.html" class="world-orb" data-orb="dark-alves">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Свартальфхейм</span>
-        </a>
-        <a href="world/world-muspelheim.html" class="world-orb" data-orb="muspelheim">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Муспельхейм</span>
-        </a>
-        <a href="world/world-niflheim.html" class="world-orb" data-orb="niflheim">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Нифльхейм</span>
-        </a>
-        <a href="world/helheimr.html" class="world-orb" data-orb="helheim">
-            <div class="orb-sphere"></div>
-            <span class="orb-label">Хельхейм</span>
-        </a>
+    <div class="orbs-grid" id="orbsGrid">
+        <!-- Генерируется из конфига -->
     </div>
 </section>
 
@@ -218,73 +123,10 @@
 <!-- ===== СЕКЦИЯ: РУНЫ ===== -->
 <section class="section runes-showcase" id="runes">
     <h2 class="section-title">ᚠ Руны ᚠ</h2>
-    <p class="section-subtitle">Древние знаки силы и мудрости</p>
+    <p class="section-subtitle">Древние знаки силы и мудрости —elder Futhark (24 руны)</p>
     
-    <div class="runes-grid">
-        <a href="runes/fólkvangr.html" class="rune-tile">
-            <div class="rune-symbol">ᚠ</div>
-            <div class="rune-name">Феху</div>
-        </a>
-        <a href="runes/urðarbrunnr.html" class="rune-tile">
-            <div class="rune-symbol">ᚢ</div>
-            <div class="rune-name">Уруаз</div>
-        </a>
-        <a href="runes/tîw.html" class="rune-tile">
-            <div class="rune-symbol">ᚦ</div>
-            <div class="rune-name">Тейваз</div>
-        </a>
-        <a href="runes/mímir.html" class="rune-tile">
-            <div class="rune-symbol">ᚱ</div>
-            <div class="rune-name">Рейд</div>
-        </a>
-        <a href="runes/gef.html" class="rune-tile">
-            <div class="rune-symbol">ᚷ</div>
-            <div class="rune-name">Гебо</div>
-        </a>
-        <a href="runes/wun.html" class="rune-tile">
-            <div class="rune-symbol">ᚹ</div>
-            <div class="rune-name">Вуньо</div>
-        </a>
-        <a href="runes/haglaz.html" class="rune-tile">
-            <div class="rune-symbol">ᚺ</div>
-            <div class="rune-name">Хагалаз</div>
-        </a>
-        <a href="runes/naudiz.html" class="rune-tile">
-            <div class="rune-symbol">ᚾ</div>
-            <div class="rune-name">Наутиз</div>
-        </a>
-        <a href="runes/isa.html" class="rune-tile">
-            <div class="rune-symbol">ᛁ</div>
-            <div class="rune-name">Иса</div>
-        </a>
-        <a href="runes/jera.html" class="rune-tile">
-            <div class="rune-symbol">ᛃ</div>
-            <div class="rune-name">Йера</div>
-        </a>
-        <a href="runes/ehiz.html" class="rune-tile">
-            <div class="rune-symbol">ᛇ</div>
-            <div class="rune-name">Эйваз</div>
-        </a>
-        <a href="runes/pertho.html" class="rune-tile">
-            <div class="rune-symbol">ᛈ</div>
-            <div class="rune-name">Перт</div>
-        </a>
-        <a href="runes/algiz.html" class="rune-tile">
-            <div class="rune-symbol">ᛊ</div>
-            <div class="rune-name">Альгиз</div>
-        </a>
-        <a href="runes/sowilo.html" class="rune-tile">
-            <div class="rune-symbol">ᛏ</div>
-            <div class="rune-name">Соуло</div>
-        </a>
-        <a href="runes/tingaz.html" class="rune-tile">
-            <div class="rune-symbol">ᛒ</div>
-            <div class="rune-name">Таннит</div>
-        </a>
-        <a href="runes/othala.html" class="rune-tile">
-            <div class="rune-symbol">ᛏ</div>
-            <div class="rune-name">Одал</div>
-        </a>
+    <div class="runes-grid" id="runesGrid">
+        <!-- Генерируется из конфига -->
     </div>
 </section>
 
@@ -342,7 +184,49 @@
 
 <!-- ===== JAVASCRIPT ===== -->
 <script>
-// === Звёзды ===
+// === КОНФИГ: координаты орбов (из config/orb-positions.json) ===
+const ORB_CONFIG = {
+    asgard:       { top: "12%", left: "50%", label: "Асгард", href: "world/world-asgard.html" },
+    alfheim:      { top: "20%", left: "28%", label: "Альфхейм", href: "world/álfheimr.html" },
+    vanaheim:     { top: "20%", left: "72%", label: "Ванахейм", href: "world/world-vanaheim.html" },
+    midgard:      { top: "33%", left: "30%", label: "Мидгард", href: "world/world-midgard.html" },
+    jotunheim:    { top: "33%", left: "70%", label: "Йотунхейм", href: "world/world-jotunheim.html" },
+    svartalfheim: { top: "47%", left: "30%", label: "Свартальфхейм", href: "world/svartálfaheimr.html" },
+    muspelheim:   { top: "47%", left: "70%", label: "Муспельхейм", href: "world/world-muspelheim.html" },
+    niflheim:     { top: "60%", left: "30%", label: "Нифльхейм", href: "world/world-niflheim.html" },
+    helheim:      { top: "60%", left: "70%", label: "Хельхейм", href: "world/helheimr.html" }
+};
+
+// === КОНФИГ: руны (Elder Futhark — 24 руны, 3 фукхы по 8) ===
+const RUNE_CONFIG = [
+    // Первая фукх (Fehu-fuḥu) — изобилие, сила
+    { rune: "ᚠ", name: "Феху", translit: "Fehu", meaning: "Крупный рогатый скот, богатство, изобилие", futhor: 1 },
+    { rune: "ᚢ", name: "Уруаз", translit: "Uruz", meaning: "Дикий бык, сила, здоровье, витальность", futhor: 1 },
+    { rune: "ᚦ", name: "Тейваз", translit: "Tīwaz", meaning: "Бог Тюр, справедливость, победа, мужество", futhor: 1 },
+    { rune: "ᚱ", name: "Рейд", translit: "Rāð", meaning: "Поездка, путешествие, ритм, защита", futhor: 1 },
+    { rune: "ᚷ", name: "Гебо", translit: "Gebo", meaning: "Дар, дарение, союз, равновесие", futhor: 1 },
+    { rune: "ᚹ", name: "Вуньо", translit: "Wunjo", meaning: "Радость, благодать, радость богов", futhor: 1 },
+    { rune: "ᚺ", name: "Хагалаз", translit: "Hagall", meaning: "Град, разрушение, очищение, трансформация", futhor: 1 },
+    { rune: "ᚾ", name: "Наутиз", translit: "Nauðiz", meaning: "Нужда, необходимость, преодоление, давление", futhor: 1 },
+    // Вторая фукх (Isaz-Ingwaz) — внутренняя сила
+    { rune: "ᛁ", name: "Иса", translit: "Isa", meaning: "Лёд, застой, терпение, концентрация, выдержка", futhor: 2 },
+    { rune: "ᛃ", name: "Йера", translit: "Jera", meaning: "Урожай, год, цикл, награда за труд", futhor: 2 },
+    { rune: "ᛇ", name: "Эйваз", translit: "Eihwaz", meaning: "Тис, выносливость, защита, жизненная сила", futhor: 2 },
+    { rune: "ᛈ", name: "Перт", translit: "Perthro", meaning: "Тайна, судьба, чаша, магическое знание", futhor: 2 },
+    { rune: "ᛊ", name: "Альгиз", translit: "Algiz", meaning: "Олень/защита, покровительство, связь с богами", futhor: 2 },
+    { rune: "ᛏ", name: "Соуло", translit: "Sól", meaning: "Солнце, жизнь, победа, целостность", futhor: 2 },
+    { rune: "ᛒ", name: "Таннит", translit: "Teiwaz", meaning: "Справедливость, закон, вождь, руководство", futhor: 2 },
+    { rune: "ᛏ", name: "Одал", translit: "Ōðala", meaning: "Наследие, дом, предки, родовое право", futhor: 2 },
+    // Третья фукх (Дараз до Ульвиз) — высшие знания
+    { rune: "ᛗ", name: "Мандаз", translit: "Mannaz", meaning: "Человек, общество, разум, самосознание", futhor: 3 },
+    { rune: "ᛚ", name: "Лаузи", translit: "Laguz", meaning: "Вода, поток, интуиция, подсознание, циклы", futhor: 3 },
+    { rune: "ᛝ", name: "Ингуиз", translit: "Ingwaz", meaning: "Бог Инг, плодородие, завершение, внутренняя сила", futhor: 3 },
+    { rune: "ᛟ", name: "Эйлаз", translit: "Éihwalaz", meaning: "Мировой змей, трансформация, возрождение", futhor: 3 },
+    { rune: "ᛞ", name: "Дараз", translit: "Dagaz", meaning: "Рассвет, день, прорыв, пробуждение, переход", futhor: 3 },
+    { rune: "ᛡ", name: "Ульвиз", translit: "Óðalaz", meaning: "Волк, безумие Одина, вдохновение, безумие пророчества", futhor: 3 }
+];
+
+// === Генерация звёзд ===
 (function generateStars() {
     const container = document.getElementById('stars');
     const count = 150;
@@ -357,6 +241,82 @@
         star.style.width = (1 + Math.random() * 2) + 'px';
         star.style.height = star.style.width;
         container.appendChild(star);
+    }
+})();
+
+// === Генерация орбов на дереве ===
+(function generateOrbs() {
+    const container = document.getElementById('worldNodes');
+    for (const [key, orb] of Object.entries(ORB_CONFIG)) {
+        const node = document.createElement('a');
+        node.href = orb.href;
+        node.className = 'world-node';
+        node.dataset.world = key;
+        node.style.top = orb.top;
+        node.style.left = orb.left;
+        node.innerHTML = `
+            <div class="world-circle">
+                <div class="world-circle-inner"></div>
+            </div>
+            <span class="world-label">${orb.label}</span>
+        `;
+        container.appendChild(node);
+    }
+})();
+
+// === Генерация орбов в секции ===
+(function generateOrbsGrid() {
+    const container = document.getElementById('orbsGrid');
+    const orbColors = {
+        ases: { light: '#d4a855', dark: '#5a4010', glow: 'rgba(212,168,85,0.4)' },
+        vanir: { light: '#a855f7', dark: '#3a1070', glow: 'rgba(168,85,247,0.4)' },
+        jotun: { light: '#5c7a52', dark: '#1a2a18', glow: 'rgba(92,122,82,0.4)' },
+        midgard: { light: '#4a90d9', dark: '#1a3050', glow: 'rgba(74,144,217,0.4)' },
+        'light-alves': { light: '#e8d8f0', dark: '#5a4a6a', glow: 'rgba(232,216,240,0.3)' },
+        'dark-alves': { light: '#8a7a6a', dark: '#2a1a0a', glow: 'rgba(138,122,106,0.3)' },
+        helheim: { light: '#4a5a4a', dark: '#0a1a0a', glow: 'rgba(74,90,74,0.3)' },
+        muspelheim: { light: '#d4722a', dark: '#4a1a08', glow: 'rgba(212,114,42,0.4)' },
+        niflheim: { light: '#a8c4d8', dark: '#2a3a4a', glow: 'rgba(168,196,216,0.3)' }
+    };
+    
+    const orbData = [
+        { key: 'ases', name: 'Асгард', href: 'world/world-asgard.html' },
+        { key: 'vanir', name: 'Ванахейм', href: 'world/world-vanaheim.html' },
+        { key: 'midgard', name: 'Мидгард', href: 'world/world-midgard.html' },
+        { key: 'jotun', name: 'Йотунхейм', href: 'world/world-jotunheim.html' },
+        { key: 'light-alves', name: 'Альфхейм', href: 'world/álfheimr.html' },
+        { key: 'dark-alves', name: 'Свартальфхейм', href: 'world/svartálfaheimr.html' },
+        { key: 'muspelheim', name: 'Муспельхейм', href: 'world/world-muspelheim.html' },
+        { key: 'niflheim', name: 'Нифльхейм', href: 'world/world-niflheim.html' },
+        { key: 'helheim', name: 'Хельхейм', href: 'world/helheimr.html' }
+    ];
+    
+    for (const orb of orbData) {
+        const colors = orbColors[orb.key];
+        const item = document.createElement('a');
+        item.href = orb.href;
+        item.className = 'world-orb';
+        item.dataset.orb = orb.key;
+        item.innerHTML = `
+            <div class="orb-sphere" style="--orb-light:${colors.light};--orb-dark:${colors.dark};--orb-glow:${colors.glow}"></div>
+            <span class="orb-label">${orb.name}</span>
+        `;
+        container.appendChild(item);
+    }
+})();
+
+// === Генерация рун ===
+(function generateRunes() {
+    const container = document.getElementById('runesGrid');
+    for (const r of RUNE_CONFIG) {
+        const tile = document.createElement('a');
+        tile.href = `runes/${r.translit.toLowerCase()}.html`;
+        tile.className = 'rune-tile';
+        tile.innerHTML = `
+            <div class="rune-symbol">${r.rune}</div>
+            <div class="rune-name">${r.name}</div>
+        `;
+        container.appendChild(tile);
     }
 })();
 
@@ -375,7 +335,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// === Плавный скролл для навигации ===
+// === Плавный скролл ===
 document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -383,7 +343,6 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
         if (target) {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-        // Закрыть мобильное меню
         document.getElementById('navMenu').classList.remove('active');
     });
 });

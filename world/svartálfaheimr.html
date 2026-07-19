@@ -3,35 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Свартальфхейм (Svartálfaheimr) — мир карлов и тёмных эльфов">
+    <meta name="description" content="Свартальфхейм (Svartálfaheimr) — Обитель тёмных эльфов и dwarfs">
     <title>Свартальфхейм — Скандинавская Мифология</title>
     <link rel="stylesheet" href="../css/style-new.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <a href="../index.html" class="back-link">← На главную</a>
-            <h1>Свартальфхейм</h1>
-            <p class="subtitle">Svartálfaheimr — мир карлов и тёмных эльфов</p>
-        </header>
+<body class="worlds-page-body">
 
-        <div class="character-page">
-            <div class="character-main">
-                <div class="character-image">
-                    <img src="../images/odin.svg" alt="Svartálfaheimr">
-                </div>
-                <div class="character-info">
-                    <h2>Svartálfaheimr</h2>
-                    <p><strong>Происхождение:</strong> Мир карлов</p>
-                    <p><strong>Роль:</strong> мир карлов и тёмных эльфов</p>
-                </div>
-            </div>
-        </div>
+<!-- ===== СЕВЕРНОЕ СИЯНИЕ ===== -->
+<div class="aurora-container">
+    <div class="aurora-layer"></div>
+    <div class="aurora-layer"></div>
+    <div class="aurora-layer"></div>
+    <div class="aurora-curtain"></div>
+</div>
 
-        <footer>
-            <p>© 2024 Скандинавская Мифология</p>
-            <p><a href="../index.html">← На главную</a> | <a href="../about.html">О проекте</a></p>
-        </footer>
+<!-- ===== ЗВЁЗДЫ ===== -->
+<div class="stars" id="stars"></div>
+
+<!-- ===== НАВИГАЦИЯ ===== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="../index.html" class="nav-logo">
+            <span class="nav-rune">ᚱ</span>
+            <span class="nav-name">Scandic</span>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../index.html#worlds" class="nav-link"><span class="rune">☽</span> Миры</a></li>
+            <li><a href="../index.html#pantheons" class="nav-link"><span class="rune">⚡</span> Боги</a></li>
+            <li><a href="../index.html#runes" class="nav-link"><span class="rune">ᚠ</span> Руны</a></li>
+            <li><a href="../index.html#sagas" class="nav-link"><span class="rune">📜</span> Саги</a></li>
+            <li><a href="../literature.html" class="nav-link"><span class="rune">📖</span> Литература</a></li>
+            <li><a href="../about.html" class="nav-link"><span class="rune">ℹ</span> О проекте</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
     </div>
+</nav>
+
+<!-- ===== ЗАГОЛОВОК МИРА ===== -->
+<header class="world-header">
+    <div class="world-header-bg"></div>
+    <h1 class="world-name">
+        <span class="world-name-icon">⚒️</span>
+        Свартальфхейм
+    </h1>
+    <p class="world-epithet">Svartálfaheimr — Обитель тёмных эльфов и dwarfs</p>
+    <div class="world-divider"></div>
+</header>
+
+<!-- ===== КОНТЕНТ ===== -->
+<div class="world-content">
+    <p>Свартальфхейм — подземный мир тёмных эльфов (свартальвов) и dwarfs, великих кузнецов и мастеров. Здесь создаются легендарные артефакты богов.</p>
+    
+    <h2>👑 Правитель</h2>
+    <p><strong>Нет единого правителя</strong></p>
+    
+    <h2>📖 О Свартальфхейм</h2>
+    <p>Свартальфхейм — подземный мир тёмных эльфов (свартальвов) и dwarfs, великих кузнецов и мастеров. Здесь создаются легендарные артефакты богов.</p>
+    
+    <a href="../index.html" class="back-link">← Назад к древу</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-rune">ᚱ</div>
+        <div class="footer-name">SCANDIC</div>
+        <p>Скандинавская мифология — миры, боги, руны и легенды</p>
+        <p class="footer-copy">© 2026 Scandic.</p>
+    </div>
+</footer>
+
+<script>
+// Навигация
+document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('active');
+});
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+});
+</script>
+
 </body>
 </html>
