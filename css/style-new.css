@@ -1,5 +1,5 @@
 /* ========================================
-   SCANDIC — Новая система стилей
+   SCANDIC - Новая система стилей
    Yggdrasil Theme | Версия 2.0
    ======================================== */
 
@@ -13,32 +13,32 @@
   --bg-night: #0a0f1a;
   --bg-midnight: #0f1628;
   --bg-twilight: #1a2240;
-  
+
   --aurora-green: #39ff8c;
   --aurora-cyan: #00f0ff;
   --aurora-purple: #a855f7;
   --aurora-blue: #3b82f6;
   --aurora-pink: #ec4899;
-  
+
   --text-ice: #d4e6f0;
   --text-frost: #a8c4d8;
   --text-mist: #7a9ab5;
   --text-shadow: #3a5a7a;
-  
+
   --gold-auric: #d4a855;
   --gold-bright: #f0c860;
   --gold-dim: #a08040;
-  
+
   --rune-glow: rgba(57, 255, 140, 0.6);
   --planet-glow: rgba(240, 200, 96, 0.5);
-  
+
   /* Шрифты */
   --font-runic: 'Cinzel Decorative', serif;
   --font-heading: 'Cinzel', serif;
   --font-body: 'EB Garamond', serif;
   --font-legend: 'IM Fell English', serif;
   --font-fraktur: 'UnifrakturMaguntia', cursive;
-  
+
   /* Размеры */
   --nav-height: 70px;
   --section-padding: 100px;
@@ -301,8 +301,9 @@ body {
 /* Заголовок */
 .hero-title-wrap {
   text-align: center;
-  margin-bottom: 2em;
-  z-index: 2;
+  margin-bottom: 1em;
+  z-index: 10;
+  padding: 20px;
 }
 
 .hero-title {
@@ -328,57 +329,115 @@ body {
 .yggdrasil-scene {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  height: 70vh;
+  max-width: 1000px;
+  height: 75vh;
   min-height: 500px;
   margin: 0 auto;
   z-index: 2;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 60px rgba(240, 200, 96, 0.15);
 }
 
-.yggdrasil-tree {
+/* Фон - реальное изображение дерева */
+.yggdrasil-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  filter: brightness(0.85) contrast(1.1);
+  transition: filter 0.5s ease;
+}
+
+.yggdrasil-scene:hover .yggdrasil-bg {
+  filter: brightness(0.95) contrast(1.15);
+}
+
+/* ===== МИРЫ-ОРБЫ НА ДЕРЕВЕ ===== */
+.world-nodes {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
-/* SVG Tree */
-.tree-svg {
+.world-node {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  pointer-events: auto;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 5;
+}
+
+.world-node:hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 20;
+}
+
+.world-circle {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 0 20px rgba(57, 255, 140, 0.15));
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%,
+    var(--planet-color-light, #f0c860),
+    var(--planet-color-dark, #a08040)
+  );
+  box-shadow: 0 0 15px var(--planet-glow),
+              inset 0 0 10px rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(212, 168, 85, 0.5);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.tree-trunk {
-  stroke: #2a1f15;
-  stroke-width: 8;
-  fill: none;
-  stroke-linecap: round;
+.world-node:hover .world-circle {
+  box-shadow: 0 0 30px var(--planet-glow),
+              0 0 50px rgba(240, 200, 96, 0.3),
+              inset 0 0 15px rgba(255, 255, 255, 0.2);
+  border-color: var(--gold-bright);
 }
 
-.tree-branch {
-  stroke: #3a2a1a;
-  stroke-width: 4;
-  fill: none;
-  stroke-linecap: round;
+.world-circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
 }
 
-.tree-root {
-  stroke: #1a1510;
-  stroke-width: 3;
-  fill: none;
-  stroke-linecap: round;
+.world-node:hover .world-circle-inner {
+  opacity: 1;
 }
 
-.tree-leaf-cluster {
-  fill: rgba(57, 255, 140, 0.08);
-  animation: leaf-sway 6s ease-in-out infinite;
+.world-label {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-heading);
+  font-size: 0.65em;
+  color: var(--text-ice);
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-@keyframes leaf-sway {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(3px); }
+.world-node:hover .world-label {
+  opacity: 1;
+  color: var(--gold-bright);
+  bottom: -26px;
 }
 
 /* ===== КРУГЛЫЕ МИРЫ НА ДЕРЕВЕ ===== */
@@ -529,7 +588,7 @@ body {
   margin-bottom: 3em;
 }
 
-/* ===== ГЛАВНАЯ СТРАНИЦА — МИРЫ В КРУЖКАХ ===== */
+/* ===== ГЛАВНАЯ СТРАНИЦА - МИРЫ В КРУЖКАХ ===== */
 .worlds-showcase {
   display: flex;
   flex-wrap: wrap;
@@ -1235,24 +1294,24 @@ body {
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 1024px) {
   .yggdrasil-scene {
-    height: 50vh;
+    height: 55vh;
   }
-  
+
   .world-orbs-section {
     gap: 30px;
   }
-  
+
   .orb-sphere {
     width: 100px;
     height: 100px;
   }
-  
+
   .character-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  
+
   .character-stats {
     justify-content: center;
   }
@@ -1285,21 +1344,36 @@ body {
   }
 
   .hero-title {
-    font-size: 2em;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95em;
   }
 
   .yggdrasil-scene {
-    height: 40vh;
-    min-height: 300px;
+    height: 45vh;
+    min-height: 350px;
+    border-radius: 6px;
   }
 
   .world-node {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
   }
 
   .world-label {
-    font-size: 0.6em;
+    font-size: 0.55em;
+    bottom: -18px;
+  }
+
+  .world-node:hover .world-label {
+    bottom: -22px;
+  }
+
+  .world-node:hover {
+    transform: translate(-50%, -50%) scale(1.3);
   }
 
   .worlds-orbs-section {

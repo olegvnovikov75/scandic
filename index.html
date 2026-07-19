@@ -52,72 +52,34 @@
 
     <!-- ===== ДЕРЕВО ИГГДРАСИЛЬ ===== -->
     <div class="yggdrasil-scene">
-        <svg class="tree-svg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-            <!-- Корни -->
-            <path class="tree-root" d="M400,520 Q350,550 280,580" />
-            <path class="tree-root" d="M400,520 Q370,560 320,590" />
-            <path class="tree-root" d="M400,520 Q400,560 400,600" />
-            <path class="tree-root" d="M400,520 Q430,560 480,590" />
-            <path class="tree-root" d="M400,520 Q450,550 520,580" />
-            
-            <!-- Ствол -->
-            <path class="tree-trunk" d="M400,520 L400,180" />
-            
-            <!-- Ветви -->
-            <path class="tree-branch" d="M400,400 Q340,360 300,300" />
-            <path class="tree-branch" d="M400,380 Q460,340 500,280" />
-            <path class="tree-branch" d="M400,320 Q320,280 280,220" />
-            <path class="tree-branch" d="M400,300 Q480,260 520,200" />
-            <path class="tree-branch" d="M400,240 Q350,200 320,140" />
-            <path class="tree-branch" d="M400,220 Q450,180 480,120" />
-            <path class="tree-branch" d="M400,180 Q380,160 370,100" />
-            <path class="tree-branch" d="M400,180 Q420,160 430,100" />
-            <path class="tree-branch" d="M400,160 Q390,140 395,80" />
-            <path class="tree-branch" d="M400,160 Q410,140 405,80" />
-            
-            <!-- Листва -->
-            <ellipse class="tree-leaf-cluster" cx="300" cy="280" rx="40" ry="25" />
-            <ellipse class="tree-leaf-cluster" cx="500" cy="260" rx="40" ry="25" />
-            <ellipse class="tree-leaf-cluster" cx="280" cy="200" rx="35" ry="20" />
-            <ellipse class="tree-leaf-cluster" cx="520" cy="180" rx="35" ry="20" />
-            <ellipse class="tree-leaf-cluster" cx="320" cy="120" rx="30" ry="18" />
-            <ellipse class="tree-leaf-cluster" cx="480" cy="100" rx="30" ry="18" />
-            <ellipse class="tree-leaf-cluster" cx="370" cy="80" rx="25" ry="15" />
-            <ellipse class="tree-leaf-cluster" cx="430" cy="80" rx="25" ry="15" />
-            <ellipse class="tree-leaf-cluster" cx="395" cy="60" rx="20" ry="12" />
-            <ellipse class="tree-leaf-cluster" cx="405" cy="60" rx="20" ry="12" />
-            <ellipse class="tree-leaf-cluster" cx="400" cy="140" rx="50" ry="30" />
-            <ellipse class="tree-leaf-cluster" cx="400" cy="240" rx="45" ry="25" />
-            <ellipse class="tree-leaf-cluster" cx="400" cy="360" rx="40" ry="22" />
-            <ellipse class="tree-leaf-cluster" cx="350" cy="440" rx="30" ry="18" />
-            <ellipse class="tree-leaf-cluster" cx="450" cy="440" rx="30" ry="18" />
-        </svg>
+        <!-- Фоновое изображение дерева -->
+        <img src="images/yggdrasil-tree.jpg" alt="Иггдрасиль — Мировое Древо" class="yggdrasil-bg">
 
         <!-- ===== МИРЫ-ОРБЫ НА ДЕРЕВЕ ===== -->
         <div class="world-nodes">
-            <!-- Асгард -->
-            <a href="world/world-asgard.html" class="world-node" data-world="asgard" style="top:15%;left:52%;">
+            <!-- Асгард — в кроне, справа от света -->
+            <a href="world/world-asgard.html" class="world-node" data-world="asgard" style="top:18%;left:58%;">
                 <div class="world-circle">
                     <div class="world-circle-inner"></div>
                 </div>
                 <span class="world-label">Асгард</span>
             </a>
-            <!-- Ванахейм -->
-            <a href="world/world-vanaheim.html" class="world-node" data-world="vanaheim" style="top:22%;left:68%;">
+            <!-- Ванахейм — в кроне, ещё правее -->
+            <a href="world/world-vanaheim.html" class="world-node" data-world="vanaheim" style="top:25%;left:72%;">
                 <div class="world-circle">
                     <div class="world-circle-inner"></div>
                 </div>
                 <span class="world-label">Ванахейм</span>
             </a>
-            <!-- Альвхейм -->
-            <a href="world/álfheimr.html" class="world-node" data-world="alfheim" style="top:30%;left:30%;">
+            <!-- Альвхейм — в кроне, слева -->
+            <a href="world/álfheimr.html" class="world-node" data-world="alfheim" style="top:32%;left:28%;">
                 <div class="world-circle">
                     <div class="world-circle-inner"></div>
                 </div>
                 <span class="world-label">Альфхейм</span>
             </a>
-            <!-- Мидгард -->
-            <a href="world/world-midgard.html" class="world-node" data-world="midgard" style="top:45%;left:42%;">
+            <!-- Мидгард — на среднем ярусе, слева от ствола -->
+            <a href="world/world-midgard.html" class="world-node" data-world="midgard" style="top:48%;left:35%;">
                 <div class="world-circle">
                     <div class="world-circle-inner"></div>
                 </div>
