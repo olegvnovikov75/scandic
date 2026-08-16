@@ -6,24 +6,40 @@
     <meta name="description" content="Великие мифы и саги скандинавской мифологии - рагнарёк, смерть бальдра, война асов и ванов, легенды викингов">
     <meta name="keywords" content="мифы, саги, рагнарёк, легенды викингов, скандинавская мифология">
     <title>📖 Великие Мифы - Скандинавская Мифология</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-new.css">
 </head>
 <body>
-    <!-- НАВИГАЦИЯ -->
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">⚡ Скандинавская Мифология</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="gods.html">Боги</a></li>
-                    <li><a href="myths.html">Мифы</a></li>
-                    <li><a href="literature.html">Источники</a></li>
-                    <li><a href="about.html">О Проекте</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+<!-- ===== СЕВЕРНОЕ СИЯНИЕ ===== -->
+<div class="aurora-container">
+    <div class="aurora-layer"></div>
+    <div class="aurora-layer"></div>
+    <div class="aurora-layer"></div>
+    <div class="aurora-curtain"></div>
+</div>
+
+<!-- ===== ЗВЁЗДЫ ===== -->
+<div class="stars" id="stars"></div>
+
+<!-- ===== НАВИГАЦИЯ ===== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <span class="nav-rune">ᚱ</span>
+            <span class="nav-name">Scandic</span>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link"><span class="rune">☽</span> Миры</a></li>
+            <li><a href="gods.html" class="nav-link"><span class="rune">⚡</span> Боги</a></li>
+            <li><a href="myths.html" class="nav-link"><span class="rune">📜</span> Саги</a></li>
+            <li><a href="literature.html" class="nav-link"><span class="rune">📖</span> Литература</a></li>
+            <li><a href="about.html" class="nav-link"><span class="rune">ℹ</span> О проекте</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
 
     <div class="container">
         <a href="index.html" class="btn-back">← Вернуться на главную</a>
@@ -210,22 +226,22 @@
         </section>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="index.html">Главная</a>
-                <a href="gods.html">Боги</a>
-                <a href="myths.html">Мифы</a>
-                <a href="literature.html">Источники</a>
-                <a href="about.html">О Проекте</a>
-                <a href="contact.html">Контакты</a>
-            </div>
-            <p class="footer-text">
-                © 2024 <strong>Скандинавская Мифология</strong> - Полное Родословное Древо<br>
-                Откройте легенды и предания древней Скандинавии
-            </p>
+    <!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-rune">ᚱ</div>
+        <div class="footer-name">SCANDIC</div>
+        <p>Скандинавская мифология — миры, боги, руны и легенды</p>
+        <div style="margin: 1.5em 0;">
+            <a href="about.html" style="color: var(--gold-auric); text-decoration: none; margin: 0 12px;">О проекте</a>
+            <a href="contact.html" style="color: var(--gold-auric); text-decoration: none; margin: 0 12px;">Контакты</a>
+            <a href="literature.html" style="color: var(--gold-auric); text-decoration: none; margin: 0 12px;">Литература</a>
         </div>
-    </footer>
+        <p class="footer-copy">© 2026 Scandic. Создано с любовью к северным мифам.</p>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script src="js/main.js"></script>
 </body>
 </html>
