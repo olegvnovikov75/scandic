@@ -1,1 +1,4 @@
-.eddas/
+.eddass/
+.DS_Store
+*.log
+backup_*
