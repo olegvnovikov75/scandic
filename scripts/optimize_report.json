@@ -1,0 +1,395 @@
+{
+  "png_count": 41,
+  "converted": [
+    {
+      "file": "id001-odin.png",
+      "png_bytes": 751069,
+      "webp_bytes": 26790,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": false
+    },
+    {
+      "file": "id001-один.png",
+      "png_bytes": 823087,
+      "webp_bytes": 37230,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id002-borr.png",
+      "png_bytes": 744431,
+      "webp_bytes": 27706,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": false
+    },
+    {
+      "file": "id002-борр.png",
+      "png_bytes": 822447,
+      "webp_bytes": 35030,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id003-бестла.png",
+      "png_bytes": 722927,
+      "webp_bytes": 25772,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id004-тор.png",
+      "png_bytes": 734882,
+      "webp_bytes": 27820,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id005-локи.png",
+      "png_bytes": 741614,
+      "webp_bytes": 23816,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id006-фригг.png",
+      "png_bytes": 791764,
+      "webp_bytes": 31224,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id007-фрейя.png",
+      "png_bytes": 725981,
+      "webp_bytes": 31462,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id008-фрейр.png",
+      "png_bytes": 667791,
+      "webp_bytes": 22340,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id009-ньёрд.png",
+      "png_bytes": 695422,
+      "webp_bytes": 21802,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id010-ймир.png",
+      "png_bytes": 739164,
+      "webp_bytes": 27224,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id011-сурт.png",
+      "png_bytes": 809445,
+      "webp_bytes": 42772,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id012-хель.png",
+      "png_bytes": 872101,
+      "webp_bytes": 54128,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id013-фенрир.png",
+      "png_bytes": 1056902,
+      "webp_bytes": 92646,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id014-хюрмунганд.png",
+      "png_bytes": 801814,
+      "webp_bytes": 44050,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id015-бальдр.png",
+      "png_bytes": 753264,
+      "webp_bytes": 29590,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id016-хеймдалл.png",
+      "png_bytes": 689605,
+      "webp_bytes": 23240,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id017-тюр.png",
+      "png_bytes": 733199,
+      "webp_bytes": 21934,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id018-идунн.png",
+      "png_bytes": 707341,
+      "webp_bytes": 20730,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id019-хюгин.png",
+      "png_bytes": 893986,
+      "webp_bytes": 53544,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id020-мунин.png",
+      "png_bytes": 834549,
+      "webp_bytes": 38898,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id021-аск.png",
+      "png_bytes": 994074,
+      "webp_bytes": 69232,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id022-эмбла.png",
+      "png_bytes": 1067026,
+      "webp_bytes": 83076,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id023-сиф.png",
+      "png_bytes": 738340,
+      "webp_bytes": 29586,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id024-слейпнир.png",
+      "png_bytes": 936451,
+      "webp_bytes": 68384,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id025-аурубла.png",
+      "png_bytes": 882648,
+      "webp_bytes": 44074,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id026-мимир.png",
+      "png_bytes": 811870,
+      "webp_bytes": 30916,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id027-урд.png",
+      "png_bytes": 893200,
+      "webp_bytes": 51884,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id028-верданди.png",
+      "png_bytes": 891329,
+      "webp_bytes": 50196,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id029-скульд.png",
+      "png_bytes": 926098,
+      "webp_bytes": 57648,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id030-скада.png",
+      "png_bytes": 745557,
+      "webp_bytes": 27252,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id031-нёрт.png",
+      "png_bytes": 847679,
+      "webp_bytes": 46114,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id032-гюльвейг.png",
+      "png_bytes": 793829,
+      "webp_bytes": 30466,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id033-од.png",
+      "png_bytes": 806827,
+      "webp_bytes": 34112,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id034-нот.png",
+      "png_bytes": 823132,
+      "webp_bytes": 33536,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id035-дёгн.png",
+      "png_bytes": 722242,
+      "webp_bytes": 22174,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id036-соул.png",
+      "png_bytes": 747510,
+      "webp_bytes": 25056,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id037-тьяцци.png",
+      "png_bytes": 1032716,
+      "webp_bytes": 84782,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    },
+    {
+      "file": "id038-анграбода.png",
+      "png_bytes": 729673,
+      "webp_bytes": 27042,
+      "status": "ok",
+      "webp_smaller_or_equal": true,
+      "orphan": true
+    }
+  ],
+  "broken": [
+    {
+      "file": "id039-грид.png",
+      "png_bytes": 0,
+      "status": "broken",
+      "error": "cannot identify image file '/home/user/Projects/scandic/images/id039-грид.png'"
+    }
+  ],
+  "kept_png": [],
+  "orphan_png": [
+    "id001-один.png",
+    "id002-борр.png",
+    "id003-бестла.png",
+    "id004-тор.png",
+    "id005-локи.png",
+    "id006-фригг.png",
+    "id007-фрейя.png",
+    "id008-фрейр.png",
+    "id009-ньёрд.png",
+    "id010-ймир.png",
+    "id011-сурт.png",
+    "id012-хель.png",
+    "id013-фенрир.png",
+    "id014-хюрмунганд.png",
+    "id015-бальдр.png",
+    "id016-хеймдалл.png",
+    "id017-тюр.png",
+    "id018-идунн.png",
+    "id019-хюгин.png",
+    "id020-мунин.png",
+    "id021-аск.png",
+    "id022-эмбла.png",
+    "id023-сиф.png",
+    "id024-слейпнир.png",
+    "id025-аурубла.png",
+    "id026-мимир.png",
+    "id027-урд.png",
+    "id028-верданди.png",
+    "id029-скульд.png",
+    "id030-скада.png",
+    "id031-нёрт.png",
+    "id032-гюльвейг.png",
+    "id033-од.png",
+    "id034-нот.png",
+    "id035-дёгн.png",
+    "id036-соул.png",
+    "id037-тьяцци.png",
+    "id038-анграбода.png"
+  ],
+  "referenced_png": [
+    "id001-odin.png",
+    "id002-borr.png"
+  ],
+  "links_replaced": {
+    "html": 2,
+    "css": 0,
+    "files": [
+      "family/family-odin.html (1)",
+      "family/borr_1.html (1)"
+    ]
+  },
+  "lazy": {
+    "img_total": 115,
+    "img_lazy": 115,
+    "files_modified": 112
+  },
+  "deleted_png": [
+    "id001-odin.png",
+    "id002-borr.png"
+  ]
+}
