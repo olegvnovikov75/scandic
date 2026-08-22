@@ -46,9 +46,9 @@
 |------|-----|---------------------|-------------|--------|
 | **T1** | Git-гигиена: просмотреть diff (сэмпл), закоммитить работу Цикла 1 → `chore: cycle 1 — OG tags, nav fix, inline CSS cleanup (233 pages)`; запушить origin/main | `git status` чистый, origin/main в актуале | Чип | ✅ 23.08 00:27 (коммит cd5fd0d, 245 файлов +6435/−6889, push bc8fdf9..cd5fd0d, git чистый, проверка Гаечкой ✅) |
 | **T2** | Починить 3 битые ссылки (сначала проверить реальные имена целевых файлов в family/) | `verify_html_links.py` → 0 битых | Чип | ✅ 23.08 00:33 (3 замены, verify 0 битых, коммит 71860bb, проверка Гаечкой ✅) |
-| **T3** | Унифицировать title всех страниц: формат «{Название} — Scandic \| Скандинавская мифология» (без эмодзи в title; главный — «Scandic — Скандинавская мифология») | grep title: единый формат на 233+ страницах | Чип | 🔄 запущен 23.08 00:34 (subagent scandic-t3, чистый контекст) |
-| **T4** | Сгенерировать `sitemap.xml` (скрипт в scripts/, URL-база `https://olegvnovikov75.github.io/scandic/`) | sitemap.xml валиден, все страницы на месте | Чип | ⏳ |
-| **T5** | Оптимизация изображений: PNG → WebP (cwebp -q 80), обновить ссылки в HTML, добавить `loading="lazy"`; оригиналы PNG остаются в git-истории | images/ < 12MB, ссылки не битые (verify), lazy на всех img | Чип | ⏳ |
+| **T3** | Унифицировать title всех страниц: формат «{Название} — Scandic \| Скандинавская мифология» (без эмодзи в title; главный — «Scandic — Скандинавская мифология») | grep title: единый формат на 233+ страницах | Чип + Гаечка (T3b) | ✅ 23.08 00:50 (232/233, 5 эмодзи, fix_titles.py; T3b: mojibake aeir/skadi/world-unknown, коммит 4359335, проверки Гаечкой ✅) |
+| **T4** | Сгенерировать `sitemap.xml` (скрипт в scripts/, URL-база `https://olegvnovikov75.github.io/scandic/`) | sitemap.xml валиден, все страницы на месте | Чип | ✅ 23.08 01:00 (233 URL = 233 страниц, XML валиден, 0 дублей, UTF-8 диакритика; проверки Гаечкой ✅) |
+| **T5** | Оптимизация изображений: PNG → WebP (Pillow q80), обновить ссылки в HTML+CSS, добавить `loading="lazy"`; оригиналы PNG остаются в git-истории | images/ < 12MB, ссылки не битые (verify), lazy на всех img | Чип | 🔄 запущен 23.08 01:03 (subagent scandic-t5, чистый контекст) |
 | **T6** | Обновить README.md (пути, счётчики) + PROJECT_LOG.md (записи цикла 2) | README соответствует реальности | Чип | ⏳ |
 | **T7** | Чистота: .gitignore расширить; мёртвые дубли-скрипты → `scripts/archive/`; `scandic-zip-extract` → `~/.trash/20260823/` | git status чистый, архив на месте | Чип | ⏳ |
 | **T8** | (опционально) 404.html — мифологический флёр: «Вигридасиль потерял этот лист...» + ссылка на главную | красиво, валидно | Чип | ⏳ |
@@ -81,7 +81,8 @@
 
 - **T2 — цели найдены (аудит 23.08 00:24):** реальные файлы: `family/family-jormungandr.html` (ASCII-имя) и `family/family-odin.html`. Фикс: hel_1.html + fenrir_1.html: `family/jǫrmungandr.html` → `family/family-jormungandr.html`; lóki.html: `family/óðinn.html` → `family/family-odin.html`. verify: 3096 ссылок, 3 битых — подтверждено.
 - **T3 — аудит title (23.08 00:24):** 177 страниц «… — Скандинавская Мифология» (капс М), 1 стр с «мифология», 1 стр со «Scandic», несколько без бренда (404, Yggdrasill, Helheim). Целевой формат: «{Название} — Scandic | Скандинавская мифология»; index → «Scandic — Скандинавская мифология».
-- **T5 — cwebp нет в PATH** (23.08 00:24) → перед таском: `sudo apt install -y webp` (или `pip install`-альтернатива). images/ = 32MB, 41 PNG, 0 WebP. sitemap.xml — нет (T4 подтверждён).
+- **T5 — конвертер найден** (23.08 00:55): cwebp нет, НО Pillow 10.2.0 умеет WebP (smoke-тест: PNG → 26.7KB WebP @q80 ✅). Скрипт T5 — на PIL, apt-пакеты не нужны.
+- **T2/T3/T3b закрыты** (23.08 00:52): коммиты 71860bb (T2) + 4359335 (T3+T3b). Mojibake-фикс (T3b): family-aeir.html + family-skadi.html — разворот double-encode (тело страниц было «Р‘РѕРі...»), world-unknown.html 2×«Г†gir»→«Ægir», css-quote баг, «literature.html»→«Литература». Рабочие файлы Чипа (Chip_plan.md, chip_log.md) → ~/.trash/20260823/.
 
 ---
 
