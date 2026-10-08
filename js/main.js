@@ -1,167 +1,109 @@
-/* ========================================
-   SCANDIC — JavaScript
-   Интерактивность и анимации
-   ======================================== */
+/* ================================================================
+   «СКАНДИК» — скрипт сайта (чистый JS, без зависимостей)
+   1) Бургер-меню: класс .open на <header class="nav"> (узкие экраны).
+   2) Активный пункт меню по имени файла страницы
+      (+ правило для каталога gods/: подсвечивается «Боги»).
+   3) Плавный скролл по якорным ссылкам (с уважением к reduced-motion).
+================================================================ */
+(function () {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
+  var reduceMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ===== НАВИГАЦИЯ =====
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-  const navLinks = document.querySelectorAll('.nav-link');
+  /* ---------- 1. Бургер-меню ---------- */
+  var nav = document.querySelector('.nav');
+  var burger = document.querySelector('.nav__burger');
 
-  // Toggle mobile menu
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
+  function setMenu(open) {
+    if (!nav || !burger) return;
+    nav.classList.toggle('open', !!open);
+    burger.setAttribute('aria-expanded', String(!!open));
+  }
 
-  // Close mobile menu on link click
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
+  if (nav && burger) {
+    burger.addEventListener('click', function () {
+      setMenu(!nav.classList.contains('open'));
     });
-  });
 
-  // ===== ПЛАВНЫЙ СКРОЛЛ =====
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const offset = 70;
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+    // На мобильном меню закрывается после клика по ссылке.
+    Array.prototype.forEach.call(document.querySelectorAll('.nav__links a'), function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
+    });
+
+    // Escape закрывает открытое меню и возвращает фокус на кнопку.
+    document.addEventListener('keydown', function (e) {
+      if ((e.key === 'Escape' || e.keyCode === 27) && nav.classList.contains('open')) {
+        setMenu(false);
+        burger.focus();
       }
     });
-  });
 
-  // ===== АНИМАЦИЯ ПОЯВЛЕНИЯ ЭЛЕМЕНТОВ =====
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, observerOptions);
-
-  // Наблюдаем за всеми секциями и карточками
-  document.querySelectorAll('.god-card, .myth-card, .rune-cell, .world-card, .saga-card, .gallery-item').forEach(el => {
-    el.classList.add('fade-in');
-    observer.observe(el);
-  });
-
-  // ===== РУНЫ — МОДАЛЬНОЕ ОКНО =====
-  const runeCells = document.querySelectorAll('.rune-cell');
-  const runeModal = document.getElementById('runeModal');
-  const runeModalClose = document.getElementById('runeModalClose');
-  const modalRuneSymbol = document.getElementById('modalRuneSymbol');
-  const modalRuneName = document.getElementById('modalRuneName');
-  const modalRuneMeaning = document.getElementById('modalRuneMeaning');
-  const modalRuneAttributes = document.getElementById('modalRuneAttributes');
-
-  // Данные рун
-  const runesData = {
-    feoh: { name: 'Feoh', meaning: 'Богатство, достояние, материальное благополучие' },
-    uruz: { name: 'Uruz', meaning: 'Сила, здоровье, дикий бык, жизненная энергия' },
-    thurisaz: { name: 'Thurisaz', meaning: 'Великан, шип, защита, кармическое воздаяние' },
-    ansuz: { name: 'Ansuz', meaning: 'Бог, слово, вдохновение, мудрость Одина' },
-    raidho: { name: 'Raidho', meaning: 'Путешествие, колесница, внутренний порядок' },
-    kenaz: { name: 'Kenaz', meaning: 'Факел, знание, творчество, просветление' },
-    gebo: { name: 'Gebo', meaning: 'Дар, дружба, взаимность, изобилие' },
-    wunjo: { name: 'Wunjo', meaning: 'Радость, счастье, благополучие, гармония' },
-    haglaz: { name: 'Haglaz', meaning: 'Мётл, буря, испытание, трансформация' },
-    haggiz: { name: 'Haggiz', meaning: 'Мётл, защита, разрушение преград' },
-    nauthiz: { name: 'Nauthiz', meaning: 'Нужда, необходимость, терпение, выживание' },
-    isa: { name: 'Isa', meaning: 'Лёд, застой, ясность, внутреннее сосредоточение' },
-    jera: { name: 'Jera', meaning: 'Урожай, сезон, цикл, терпение и награда' },
-    eihwaz: { name: 'Eihwaz', meaning: 'Иггдрасиль, прочность, жизненная сила' },
-    perthro: { name: 'Perthro', meaning: 'Тайна, судьба, кровь, скрытое знание' },
-    algiz: { name: 'Algiz', meaning: 'Защита, олень, щит, покровительство богов' },
-    sowilo: { name: 'Sowilo', meaning: 'Солнце, сила, победа, целостность' },
-    tiwaz: { name: 'Tiwaz', meaning: 'Тюр, справедливость, победа, героизм' },
-    beorthan: { name: 'Beorthan', meaning: 'Берёза, обновление, очищение, рождение' },
-    menaz: { name: 'Menaz', meaning: 'Мудрец, порядок, учение, дисциплина' },
-    ingwaz: { name: 'Ingwaz', meaning: 'Инг, плодородие, завершение, внутренняя сила' },
-    dagaz: { name: 'Dagaz', meaning: 'День, рассвет, прорыв, пробуждение' },
-    mathuzang: { name: 'Mathuzang', meaning: 'Дом, отцовский дом, семейная связь' },
-    lauthiz: { name: 'Lauthiz', meaning: 'Рана, знание через боль, прозрение' },
-    kaunan: { name: 'Kaunan', meaning: 'Рана, огонь, знание, творческий огонь' },
-    nauðiz: { name: 'Nauðiz', meaning: 'Нужда, вынужденность, преодоление' }
-  };
-
-  runeCells.forEach(cell => {
-    cell.addEventListener('click', () => {
-      const runeKey = cell.dataset.rune;
-      const rune = runesData[runeKey];
-
-      if (rune) {
-        modalRuneSymbol.textContent = cell.querySelector('.rune-symbol').textContent;
-        modalRuneName.textContent = rune.name;
-        modalRuneMeaning.textContent = rune.meaning;
-        runeModal.classList.add('active');
-      }
-    });
-  });
-
-  // Закрытие модального окна
-  runeModalClose.addEventListener('click', () => {
-    runeModal.classList.remove('active');
-  });
-
-  runeModal.addEventListener('click', (e) => {
-    if (e.target === runeModal) {
-      runeModal.classList.remove('active');
-    }
-  });
-
-  // Закрытие на Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      runeModal.classList.remove('active');
-    }
-  });
-
-  // ===== НАВИГАЦИЯ — ПОДСВЕТКА АКТИВНОЙ СЕКЦИИ =====
-  const sections = document.querySelectorAll('.section[id]');
-
-  function updateActiveNav() {
-    const scrollPos = window.scrollY + 100;
-
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
-          link.classList.remove('active-link');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active-link');
-          }
-        });
-      }
+    // При расширении окна до десктопа — сбросить состояние меню.
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1239) setMenu(false);
     });
   }
 
-  window.addEventListener('scroll', updateActiveNav);
+  /* ---------- 2. Активный пункт меню по имени файла ---------- */
+  (function () {
+    var links = document.querySelectorAll('.nav__links a');
+    if (!links.length) return;
 
-  // ===== СТИЛЬ НАВИГАЦИИ ПРИ СКРОЛЛЕ =====
-  const navbar = document.getElementById('navbar');
+    var path = window.location.pathname || '/';
+    var cleanPath = path.replace(/\/+$/, '');
+    var file = cleanPath.split('/').pop().toLowerCase();
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.style.borderBottomColor = 'rgba(196, 163, 90, 0.25)';
-    } else {
-      navbar.style.borderBottomColor = 'rgba(196, 163, 90, 0.15)';
+    // Корень сайта → index.html.
+    if (!file) {
+      file = 'index.html';
+    } else if (/^([a-z0-9_-]+)$/i.test(file)) {
+      // Путь без расширения, например http://host/cosmos/ → cosmos.html.
+      file += '.html';
+    }
+
+    var insideGods = /(^|\/)gods\//i.test(path);
+
+    Array.prototype.forEach.call(links, function (a) {
+      var href = a.getAttribute('href') || '';
+      var hfile = href.split('/').pop().split('#')[0].split('?')[0].toLowerCase();
+
+      var match = (hfile === file);
+      // Страницы богов лежат в gods/ — имя файла не совпадает с пунктом меню,
+      // поэтому внутри каталога подсвечиваем «Боги».
+      if (!match && insideGods) {
+        match = (hfile === 'gods.html');
+      }
+
+      a.classList.toggle('active', match);
+    });
+  })();
+
+  /* ---------- 3. Плавный скролл по якорям ---------- */
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (!t || !t.closest) return;
+
+    var a = t.closest('a[href^="#"]');
+    if (!a) return;
+
+    var href = a.getAttribute('href') || '';
+
+    // «#» без имени — вверх страницы.
+    if (href === '#') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      return;
+    }
+
+    var id = href.slice(1);
+    var el = document.getElementById(id) || (id ? document.querySelector(href) : null);
+    if (!el) return; // Не наш элемент — пусть браузер делает сам.
+
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    if (window.history && history.pushState) {
+      history.pushState(null, '', href);
     }
   });
-
-});
+})();

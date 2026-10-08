@@ -1,379 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Scandic — Скандинавская мифология. Миры, боги, руны, саги и легенды древних северных народов.">
-    <meta name="keywords" content="скандинавская мифология, асы, ваннир, йотуны, руны, саги, Эдда, Иггдрасиль">
-    <title>Scandic — Скандинавская мифология</title>
-    <!-- ===== Open Graph / Social Media ===== -->
-    <meta property="og:title" content="Index — Scandic">
-    <meta property="og:description" content="Скандинавская мифология — миры, боги, саги и легенды древних северных народов. Интерактивная энциклопедия с родословным древом.">
-    <meta property="og:image" content="https://olegvnovikov75.github.io/scandic/images/favicon.svg">
-    <meta property="og:url" content="https://olegvnovikov75.github.io/scandic/index.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Index — Scandic">
-    <meta name="twitter:description" content="Скандинавская мифология — миры, боги, саги и легенды древних северных народов. Интерактивная энциклопедия с родословным древом.">
-
-    <link rel="stylesheet" href="css/style-new.css">
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Скандик — мифология севера: Иггдрасиль и девять миров, боги асы и ваны, руны, Эдды и Рагнарёк. Статический сайт без внешних зависимостей.">
+<title>СКАНДИК — мифология севера</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="main-page-body">
+<body>
 
-<!-- ===== СЕВЕРНОЕ СИЯНИЕ ===== -->
-<div class="aurora-container">
-    <div class="aurora-layer"></div>
-    <div class="aurora-layer"></div>
-    <div class="aurora-layer"></div>
-    <div class="aurora-curtain"></div>
-</div>
+<header class="nav">
+  <a class="nav__logo" href="index.html">&#53649; <span>Скандик</span></a>
+  <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false">&#9776;</button>
+  <nav class="nav__links">
+    <a href="index.html">Главная</a>
+    <a href="cosmos.html">Космос</a>
+    <a href="realms.html">Девять миров</a>
+    <a href="gods.html">Боги</a>
+    <a href="runes.html">Руны</a>
+    <a href="creatures.html">Существа</a>
+    <a href="eddas.html">Эдды и источники</a>
+    <a href="ragnarok.html">Рагнарёк</a>
+    <a href="vikings.html">Викинги</a>
+    <a href="timeline.html">Хронология</a>
+    <a href="about.html">О сайте</a>
+  </nav>
+</header>
 
-<!-- ===== ЗВЁЗДЫ ===== -->
-<div class="stars" id="stars"></div>
+<main class="main">
 
-<!-- ===== НАВИГАЦИЯ ===== -->
-<nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">
-            <span class="nav-rune">ᚱ</span>
-            <span class="nav-name">Scandic</span>
-        </a>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#worlds" class="nav-link"><span class="rune">☽</span> Миры</a></li>
-            <li><a href="#pantheons" class="nav-link"><span class="rune">⚡</span> Боги</a></li>
-            <li><a href="#runes" class="nav-link"><span class="rune">ᚠ</span> Руны</a></li>
-            <li><a href="#sagas" class="nav-link"><span class="rune">📜</span> Саги</a></li>
-            <li><a href="literature.html" class="nav-link"><span class="rune">📖</span> Литература</a></li>
-            <li><a href="about.html" class="nav-link"><span class="rune">ℹ</span> О проекте</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Меню">
-            <span></span><span></span><span></span>
-        </button>
+  <!-- ГЕРОЙ: титр, подзаголовок, полупрозрачный Иггдрасиль (inline SVG) -->
+  <section class="hero" id="top">
+    <span class="hero__rune" aria-hidden="true">&#53649;</span>
+
+    <svg class="hero__tree" viewBox="0 0 420 980" fill="none" stroke="currentColor" aria-hidden="true">
+      <!-- ствол -->
+      <path d="M210 956 C 204 780, 216 560, 206 300" stroke-width="3.5"/>
+      <!-- три корня -->
+      <path d="M210 956 C 168 964, 118 968, 58 946" stroke-width="2.5"/>
+      <path d="M210 956 L 210 979 M210 956 C 214 968, 213 974, 212 979" stroke-width="2.5"/>
+      <path d="M210 956 C 252 964, 302 968, 362 944" stroke-width="2.5"/>
+      <!-- ветви -->
+      <path d="M207 706 C 162 686, 122 664, 86 618" stroke-width="2"/>
+      <path d="M132 668 C 118 650, 108 636, 96 622" stroke-width="1.5"/>
+      <path d="M211 566 C 260 546, 304 522, 342 474" stroke-width="2"/>
+      <path d="M300 528 C 314 512, 326 500, 336 486" stroke-width="1.5"/>
+      <path d="M207 430 C 166 412, 132 392, 102 350" stroke-width="2"/>
+      <path d="M138 396 C 126 380, 116 366, 108 354" stroke-width="1.5"/>
+      <path d="M209 336 C 246 320, 278 302, 306 262" stroke-width="2"/>
+      <!-- верхушка -->
+      <path d="M206 300 C 197 252, 188 214, 170 172" stroke-width="2"/>
+      <path d="M206 300 C 213 246, 226 208, 248 168" stroke-width="2"/>
+      <path d="M206 300 C 205 240, 207 190, 206 132" stroke-width="2.5"/>
+      <!-- крона: точки -->
+      <g fill="currentColor" stroke="none">
+        <circle cx="86" cy="618" r="3"/>
+        <circle cx="342" cy="474" r="3"/>
+        <circle cx="102" cy="350" r="3"/>
+        <circle cx="306" cy="262" r="3.5"/>
+        <circle cx="170" cy="172" r="3.5"/>
+        <circle cx="248" cy="168" r="3.5"/>
+        <circle cx="206" cy="132" r="4"/>
+      </g>
+    </svg>
+
+    <h1 class="hero__title">СКАНДИК</h1>
+    <p class="hero__sub">мифология севера · боги, руны и конец света</p>
+
+    <a class="hero__scroll" href="#intro"><span>вниз</span><span class="hero__scroll__arrow" aria-hidden="true">&#8964;</span></a>
+  </section>
+
+  <!-- ВСТУПЛЕНИЕ -->
+  <section class="section" id="intro">
+    <h2 class="section__title">Мифология севера</h2>
+    <div class="prose">
+      <p class="dropcap">Мифология Скандинавии — картина мира народов Севера. Огромное дерево Иггдрасиль держит девять миров; боги асы и ваны спорят за власть над ними, великаны ждут своего часа, чудовища грызут корни дерева изнутри. И всё это не вечность: у северного мира есть начало — холодная пустота Гиннунгагапа — и конец: Рагнарёк, «судьба богов», после которого земля снова поднимется из моря.</p>
+
+      <p>Откуда мы знаем эти сюжеты? Почти всё — из двух Эдд. Старшая (Поэтическая) Эдда — собрание песен X–XIII веков, дошедшее в основном по «Копии Регис», рукописи около 1270 года; главная из них — «Прорицание вёльвы», где мёртвая пророчица рассказывает Одину о сотворении мира и его гибели. Младшая (Прозаическая) Эдда, написанная Снорри Стурлусоном около 1220 года, пересказывает те же предания связным повествованием — прежде всего в «Гюльфасингинье». К ним добавляются исландские саги XIII–XIV веков, скальдическая поэзия и надписи на рунических камнях.</p>
+
+      <p>Что в ней особенного? Это мифология без утешения: боги знают о конце и всё равно сражаются, герои стремятся в Вальхаллу за подвигами, а не за спасением души. Отсюда — монументальный характер северных сказов: судьба важнее выживания, честь важнее жизни. И отсюда же их долгая жизнь после христианства — в сагах, топонимах и языке.</p>
+
+      <p>Как читать сайт? Разделы повторяют порядок мифа: «Космос» — откуда всё взялось; «Девять миров» — где кто живёт; «Боги», «Руны», «Существа» — кто и что в этих мирах; «Эдды и источники» — из чего собрано; «Рагнарёк» — как всё кончается; «Викинги» и «Хронология» — люди, которые в это верили.</p>
+
+      <blockquote>
+        <p class="on" lang="non">Deyr f&#233;, deyja fr&#299;ndr, deyr sj&aacute;lﬁr it sama; ek veit &#233;inn at aldri deyr — d&#243;mr um dau&#240;an hvern.</p>
+        <p>«Скот умирает, родичи умирают — сам тоже скончаешься. Знаю одно: что не умрёт вовек — слава каждого из нас.»</p>
+        <cite>&#8212; «Слова Высокого» (H&aacute;vam&aacute;l), Копия Регис</cite>
+      </blockquote>
     </div>
-</nav>
+  </section>
 
-<!-- ===== ГЕРОЙ + ИГГДРАСИЛЬ ===== -->
-<section class="hero-section" id="home">
-    <div class="hero-title-wrap">
-        <h1 class="hero-title">ᚱ SCANDIC ᚱ</h1>
-        <p class="hero-subtitle">Скандинавская мифология — миры, боги, саги</p>
+  <!-- ПРЕВЬЮ ВСЕХ РАЗДЕЛОВ -->
+  <section class="section" id="sections">
+    <h2 class="section__title">Разделы</h2>
+    <p class="section__lead">Десять дверей в мир севера — от пустоты Гиннунгагапа до нового мира.</p>
+
+    <div class="grid" style="margin-top:1.6rem;">
+      <a class="card" href="cosmos.html">
+        <span class="card__rune" aria-hidden="true">&#53707;</span>
+        <h3 class="card__title">Космос</h3>
+        <p class="card__text">Гиннунгагап, Иггдрасиль и сотворение мира из тела великана.</p>
+      </a>
+
+      <a class="card" href="realms.html">
+        <span class="card__rune" aria-hidden="true">&#53714;</span>
+        <h3 class="card__title">Девять миров</h3>
+        <p class="card__text">Асгард, Мидгард и Хель: кто где живёт и что держит дерево.</p>
+      </a>
+
+      <a class="card" href="gods.html">
+        <span class="card__rune" aria-hidden="true">&#53704;</span>
+        <h3 class="card__title">Боги</h3>
+        <p class="card__text">Один, Тор, Фрейя, Локи — асы и ваны; у каждого своя страница.</p>
+      </a>
+
+      <a class="card" href="runes.html">
+        <span class="card__rune" aria-hidden="true">&#53649;</span>
+        <h3 class="card__title">Руны</h3>
+        <p class="card__text">Старший футарк: двадцать четыре знака, имена и значения.</p>
+      </a>
+
+      <a class="card" href="creatures.html">
+        <span class="card__rune" aria-hidden="true">&#53673;</span>
+        <h3 class="card__title">Существа</h3>
+        <p class="card__text">&Yacute;рмунганд, Фенрир, Нидхёгг: чудовища мира и Рагнарёка.</p>
+      </a>
+
+      <a class="card" href="eddas.html">
+        <span class="card__rune" aria-hidden="true">&#53700;</span>
+        <h3 class="card__title">Эдды и источники</h3>
+        <p class="card__text">Старшая и Младшая Эдды, саги, рунические камни и находки.</p>
+      </a>
+
+      <a class="card" href="ragnarok.html">
+        <span class="card__rune" aria-hidden="true">&#53706;</span>
+        <h3 class="card__title">Рагнарёк</h3>
+        <p class="card__text">Предвестия, гибель богов и новый мир из моря.</p>
+      </a>
+
+      <a class="card" href="vikings.html">
+        <span class="card__rune" aria-hidden="true">&#53704;</span>
+        <h3 class="card__title">Викинги</h3>
+        <p class="card__text">793&#8211;1066: экспедиции, драккары, тинги и смена веры.</p>
+      </a>
+
+      <a class="card" href="timeline.html">
+        <span class="card__rune" aria-hidden="true">&#53740;</span>
+        <h3 class="card__title">Хронология</h3>
+        <p class="card__text">Мифологическая хроника: от пустоты Гиннунгагапа до нового мира.</p>
+      </a>
+
+      <a class="card" href="about.html">
+        <span class="card__rune" aria-hidden="true">&#53672;</span>
+        <h3 class="card__title">О сайте</h3>
+        <p class="card__text">Что это за проект, откуда тексты и кто его строит.</p>
+      </a>
     </div>
+  </section>
 
-    <!-- ===== ДЕРЕВО ИГГДРАСИЛЬ ===== -->
-    <div class="yggdrasil-scene">
-        <!-- Фоновое изображение дерева -->
-        <img decoding="async" loading="lazy" src="images/yggdrasil-tree.jpg" alt="Иггдрасиль — Мировое Древо" class="yggdrasil-bg">
+  <!-- ОРНАМЕНТ-ПОДВАЛ С ДЕВИЗОМ (руны — только декоративные, без «перевода») -->
+  <section class="section" id="end">
+    <div class="ornament" aria-hidden="true"></div>
+    <p class="motto">От пустоты Гиннунгагапа &#8212; до нового мира</p>
+  </section>
 
-        <!-- ===== МИРЫ-ОРБЫ НА ДЕРЕВЕ ===== -->
-        <!-- Орбы генерируются из config/orb-positions.json -->
-        <div class="world-nodes" id="worldNodes"></div>
-    </div>
-</section>
+</main>
 
-<!-- ===== СЕКЦИЯ: МИРОВЫЕ ОРБЫ ===== -->
-<section class="section worlds-orbs-section" id="worlds">
-    <h2 class="section-title">⚹ Миры Мира ⚹</h2>
-    <p class="section-subtitle">Девять миров, связанных Иггдрасилем</p>
-    
-    <div class="orbs-grid" id="orbsGrid">
-        <!-- Генерируется из конфига -->
-    </div>
-</section>
-
-<!-- ===== СЕКЦИЯ: БОГИ ===== -->
-<section class="section pantheons-section" id="pantheons">
-    <h2 class="section-title">⚡ Пантеоны ⚡</h2>
-    <p class="section-subtitle">Асы, Ваннир и другие силы</p>
-    
-    <div class="pantheon-grid">
-        <a href="gods.html" class="pantheon-card">
-            <span class="pantheon-icon">⚡</span>
-            <span class="pantheon-name">Асы</span>
-            <span class="pantheon-count">Главный пантеон</span>
-        </a>
-        <a href="family/family-freyr.html" class="pantheon-card">
-            <span class="pantheon-icon">🌿</span>
-            <span class="pantheon-name">Ваннир</span>
-            <span class="pantheon-count">Боги плодородия</span>
-        </a>
-        <a href="family/family-yimir.html" class="pantheon-card">
-            <span class="pantheon-icon">❄️</span>
-            <span class="pantheon-name">Йотуны</span>
-            <span class="pantheon-count">Великаны</span>
-        </a>
-        <a href="family/family-heimdall.html" class="pantheon-card">
-            <span class="pantheon-icon">✨</span>
-            <span class="pantheon-name">Альвы</span>
-            <span class="pantheon-count">Светлые и тёмные</span>
-        </a>
-        <a href="family/family-thor.html" class="pantheon-card">
-            <span class="pantheon-icon">🔨</span>
-            <span class="pantheon-name">Дварфы</span>
-            <span class="pantheon-count">Кузнецы мира</span>
-        </a>
-        <a href="family/family-odin.html" class="pantheon-card">
-            <span class="pantheon-icon">🐺</span>
-            <span class="pantheon-name">Валькирии</span>
-            <span class="pantheon-count">Выборы павших</span>
-        </a>
-        <a href="family/family-idunn.html" class="pantheon-card">
-            <span class="pantheon-icon">🍎</span>
-            <span class="pantheon-name">Ирин</span>
-            <span class="pantheon-count">Хранители молодости</span>
-        </a>
-        <a href="family/family-tyr.html" class="pantheon-card">
-            <span class="pantheon-icon">⚔️</span>
-            <span class="pantheon-name">Тюр</span>
-            <span class="pantheon-count">Бог клятв</span>
-        </a>
-    </div>
-</section>
-
-<!-- ===== СЕКЦИЯ: РУНЫ ===== -->
-<section class="section runes-showcase" id="runes">
-    <h2 class="section-title">ᚠ Руны ᚠ</h2>
-    <p class="section-subtitle">Древние знаки силы и мудрости —elder Futhark (24 руны)</p>
-    
-    <div class="runes-grid" id="runesGrid">
-        <!-- Генерируется из конфига -->
-    </div>
-</section>
-
-<!-- ===== СЕКЦИЯ: САГИ ===== -->
-<section class="section sagas-showcase" id="sagas">
-    <h2 class="section-title">📜 Саги и Предания 📜</h2>
-    <p class="section-subtitle">Слова, что пережили века</p>
-    
-    <div class="sagas-list">
-        <a href="literature.html" class="saga-entry">
-            <span class="saga-icon">📜</span>
-            <div>
-                <div class="saga-title">Младшая Эдда</div>
-                <div class="saga-source">Снорри Стурлусон</div>
-            </div>
-        </a>
-        <a href="literature.html" class="saga-entry">
-            <span class="saga-icon">📖</span>
-            <div>
-                <div class="saga-title">Старшая Эдда</div>
-                <div class="saga-source">Аноним, XIII век</div>
-            </div>
-        </a>
-        <a href="literature.html" class="saga-entry">
-            <span class="saga-icon">⚔️</span>
-            <div>
-                <div class="saga-title">Саги о йотунгах</div>
-                <div class="saga-source">Древнескандинавская литература</div>
-            </div>
-        </a>
-        <a href="literature.html" class="saga-entry">
-            <span class="saga-icon">🏔️</span>
-            <div>
-                <div class="saga-title">Саги об исландцах</div>
-                <div class="saga-source">Средневековые нарративы</div>
-            </div>
-        </a>
-    </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-rune">ᚱ</div>
-        <div class="footer-name">SCANDIC</div>
-        <p>Скандинавская мифология — миры, боги, руны и легенды</p>
-        <div style="margin: 1.5em 0;">
-            <a href="about.html" style="color: var(--gold-auric); text-decoration: none; margin: 0 12px;">О проекте</a>
-            <a href="contact.html" style="color: var(--gold-auric); text-decoration: none; margin: 0 12px;">Контакты</a>
-            <a href="literature.html" style="color: var(--gold-auric); text-decoration: none; margin: 0 12px;">Литература</a>
-        </div>
-        <p class="footer-copy">© 2026 Scandic. Создано с любовью к северным мифам.</p>
-    </div>
-</footer>
-
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-// === КОНФИГ: координаты орбов (из config/orb-positions.json) ===
-const ORB_CONFIG = {
-    asgard:       { top: "12%", left: "50%", label: "Асгард", href: "world/world-asgard.html" },
-    alfheim:      { top: "20%", left: "28%", label: "Альфхейм", href: "world/álfheimr.html" },
-    vanaheim:     { top: "20%", left: "72%", label: "Ванахейм", href: "world/world-vanaheim.html" },
-    midgard:      { top: "33%", left: "30%", label: "Мидгард", href: "world/world-midgard.html" },
-    jotunheim:    { top: "33%", left: "70%", label: "Йотунхейм", href: "world/world-jotunheim.html" },
-    svartalfheim: { top: "47%", left: "30%", label: "Свартальфхейм", href: "world/svartálfaheimr.html" },
-    muspelheim:   { top: "47%", left: "70%", label: "Муспельхейм", href: "world/world-muspelheim.html" },
-    niflheim:     { top: "60%", left: "30%", label: "Нифльхейм", href: "world/world-niflheim.html" },
-    helheim:      { top: "60%", left: "70%", label: "Хельхейм", href: "world/helheimr.html" }
-};
-
-// === КОНФИГ: руны (Elder Futhark — 24 руны, 3 фукхы по 8) ===
-const RUNE_CONFIG = [
-    // Первая фукх (Fehu-fuḥu) — изобилие, сила
-    { rune: "ᚠ", name: "Феху", translit: "Fehu", meaning: "Крупный рогатый скот, богатство, изобилие", futhor: 1 },
-    { rune: "ᚢ", name: "Уруаз", translit: "Uruz", meaning: "Дикий бык, сила, здоровье, витальность", futhor: 1 },
-    { rune: "ᚦ", name: "Тейваз", translit: "Tīwaz", meaning: "Бог Тюр, справедливость, победа, мужество", futhor: 1 },
-    { rune: "ᚱ", name: "Рейд", translit: "Rāð", meaning: "Поездка, путешествие, ритм, защита", futhor: 1 },
-    { rune: "ᚷ", name: "Гебо", translit: "Gebo", meaning: "Дар, дарение, союз, равновесие", futhor: 1 },
-    { rune: "ᚹ", name: "Вуньо", translit: "Wunjo", meaning: "Радость, благодать, радость богов", futhor: 1 },
-    { rune: "ᚺ", name: "Хагалаз", translit: "Hagall", meaning: "Град, разрушение, очищение, трансформация", futhor: 1 },
-    { rune: "ᚾ", name: "Наутиз", translit: "Nauðiz", meaning: "Нужда, необходимость, преодоление, давление", futhor: 1 },
-    // Вторая фукх (Isaz-Ingwaz) — внутренняя сила
-    { rune: "ᛁ", name: "Иса", translit: "Isa", meaning: "Лёд, застой, терпение, концентрация, выдержка", futhor: 2 },
-    { rune: "ᛃ", name: "Йера", translit: "Jera", meaning: "Урожай, год, цикл, награда за труд", futhor: 2 },
-    { rune: "ᛇ", name: "Эйваз", translit: "Eihwaz", meaning: "Тис, выносливость, защита, жизненная сила", futhor: 2 },
-    { rune: "ᛈ", name: "Перт", translit: "Perthro", meaning: "Тайна, судьба, чаша, магическое знание", futhor: 2 },
-    { rune: "ᛊ", name: "Альгиз", translit: "Algiz", meaning: "Олень/защита, покровительство, связь с богами", futhor: 2 },
-    { rune: "ᛏ", name: "Соуло", translit: "Sól", meaning: "Солнце, жизнь, победа, целостность", futhor: 2 },
-    { rune: "ᛒ", name: "Таннит", translit: "Teiwaz", meaning: "Справедливость, закон, вождь, руководство", futhor: 2 },
-    { rune: "ᛏ", name: "Одал", translit: "Ōðala", meaning: "Наследие, дом, предки, родовое право", futhor: 2 },
-    // Третья фукх (Дараз до Ульвиз) — высшие знания
-    { rune: "ᛗ", name: "Мандаз", translit: "Mannaz", meaning: "Человек, общество, разум, самосознание", futhor: 3 },
-    { rune: "ᛚ", name: "Лаузи", translit: "Laguz", meaning: "Вода, поток, интуиция, подсознание, циклы", futhor: 3 },
-    { rune: "ᛝ", name: "Ингуиз", translit: "Ingwaz", meaning: "Бог Инг, плодородие, завершение, внутренняя сила", futhor: 3 },
-    { rune: "ᛟ", name: "Эйлаз", translit: "Éihwalaz", meaning: "Мировой змей, трансформация, возрождение", futhor: 3 },
-    { rune: "ᛞ", name: "Дараз", translit: "Dagaz", meaning: "Рассвет, день, прорыв, пробуждение, переход", futhor: 3 },
-    { rune: "ᛡ", name: "Ульвиз", translit: "Óðalaz", meaning: "Волк, безумие Одина, вдохновение, безумие пророчества", futhor: 3 }
-];
-
-// === Генерация звёзд ===
-(function generateStars() {
-    const container = document.getElementById('stars');
-    const count = 150;
-    for (let i = 0; i < count; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = Math.random() * 100 + '%';
-        star.style.top = Math.random() * 100 + '%';
-        star.style.setProperty('--duration', (2 + Math.random() * 4) + 's');
-        star.style.setProperty('--max-opacity', (0.3 + Math.random() * 0.7).toString());
-        star.style.animationDelay = (Math.random() * 5) + 's';
-        star.style.width = (1 + Math.random() * 2) + 'px';
-        star.style.height = star.style.width;
-        container.appendChild(star);
-    }
-})();
-
-// === Генерация орбов на дереве ===
-(function generateOrbs() {
-    const container = document.getElementById('worldNodes');
-    for (const [key, orb] of Object.entries(ORB_CONFIG)) {
-        const node = document.createElement('a');
-        node.href = orb.href;
-        node.className = 'world-node';
-        node.dataset.world = key;
-        node.style.top = orb.top;
-        node.style.left = orb.left;
-        node.innerHTML = `
-            <div class="world-circle">
-                <div class="world-circle-inner"></div>
-            </div>
-            <span class="world-label">${orb.label}</span>
-        `;
-        container.appendChild(node);
-    }
-})();
-
-// === Генерация орбов в секции ===
-(function generateOrbsGrid() {
-    const container = document.getElementById('orbsGrid');
-    const orbColors = {
-        ases: { light: '#d4a855', dark: '#5a4010', glow: 'rgba(212,168,85,0.4)' },
-        vanir: { light: '#a855f7', dark: '#3a1070', glow: 'rgba(168,85,247,0.4)' },
-        jotun: { light: '#5c7a52', dark: '#1a2a18', glow: 'rgba(92,122,82,0.4)' },
-        midgard: { light: '#4a90d9', dark: '#1a3050', glow: 'rgba(74,144,217,0.4)' },
-        'light-alves': { light: '#e8d8f0', dark: '#5a4a6a', glow: 'rgba(232,216,240,0.3)' },
-        'dark-alves': { light: '#8a7a6a', dark: '#2a1a0a', glow: 'rgba(138,122,106,0.3)' },
-        helheim: { light: '#4a5a4a', dark: '#0a1a0a', glow: 'rgba(74,90,74,0.3)' },
-        muspelheim: { light: '#d4722a', dark: '#4a1a08', glow: 'rgba(212,114,42,0.4)' },
-        niflheim: { light: '#a8c4d8', dark: '#2a3a4a', glow: 'rgba(168,196,216,0.3)' }
-    };
-    
-    const orbData = [
-        { key: 'ases', name: 'Асгард', href: 'world/world-asgard.html' },
-        { key: 'vanir', name: 'Ванахейм', href: 'world/world-vanaheim.html' },
-        { key: 'midgard', name: 'Мидгард', href: 'world/world-midgard.html' },
-        { key: 'jotun', name: 'Йотунхейм', href: 'world/world-jotunheim.html' },
-        { key: 'light-alves', name: 'Альфхейм', href: 'world/álfheimr.html' },
-        { key: 'dark-alves', name: 'Свартальфхейм', href: 'world/svartálfaheimr.html' },
-        { key: 'muspelheim', name: 'Муспельхейм', href: 'world/world-muspelheim.html' },
-        { key: 'niflheim', name: 'Нифльхейм', href: 'world/world-niflheim.html' },
-        { key: 'helheim', name: 'Хельхейм', href: 'world/helheimr.html' }
-    ];
-    
-    for (const orb of orbData) {
-        const colors = orbColors[orb.key];
-        const item = document.createElement('a');
-        item.href = orb.href;
-        item.className = 'world-orb';
-        item.dataset.orb = orb.key;
-        item.innerHTML = `
-            <div class="orb-sphere" style="--orb-light:${colors.light};--orb-dark:${colors.dark};--orb-glow:${colors.glow}"></div>
-            <span class="orb-label">${orb.name}</span>
-        `;
-        container.appendChild(item);
-    }
-})();
-
-// === Генерация рун ===
-(function generateRunes() {
-    const container = document.getElementById('runesGrid');
-    for (const r of RUNE_CONFIG) {
-        const tile = document.createElement('a');
-        tile.href = `runes/${r.translit.toLowerCase()}.html`;
-        tile.className = 'rune-tile';
-        tile.innerHTML = `
-            <div class="rune-symbol">${r.rune}</div>
-            <div class="rune-name">${r.name}</div>
-        `;
-        container.appendChild(tile);
-    }
-})();
-
-// === Навигация (мобильная) ===
-document.getElementById('navToggle').addEventListener('click', function() {
-    document.getElementById('navMenu').classList.toggle('active');
-});
-
-// === Навбар при скролле ===
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// === Плавный скролл ===
-document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        document.getElementById('navMenu').classList.remove('active');
-    });
-});
-
-// === Анимация появления секций ===
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    observer.observe(section);
-});
-</script>
-
+<footer class="footer">Скандик · мифология Скандинавии · 2026</footer>
+<script src="js/main.js"></script>
 </body>
 </html>

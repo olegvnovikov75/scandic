@@ -1,210 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="О проекте Scandic — интерактивной энциклопедии скандинавской мифологии. Создано с любовью к мифам и сагам." >
-    <title>О проекте — Scandic | Скандинавская мифология</title>
-    <!-- ===== Open Graph / Social Media ===== -->
-    <meta property="og:title" content="About — Scandic">
-    <meta property="og:description" content="О проекте Scandic — интерактивная энциклопедия скандинавской мифологии.">
-    <meta property="og:image" content="https://olegvnovikov75.github.io/scandic/images/favicon.svg">
-    <meta property="og:url" content="https://olegvnovikov75.github.io/scandic/about.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About — Scandic">
-    <meta name="twitter:description" content="О проекте Scandic — интерактивная энциклопедия скандинавской мифологии.">
-
-    <link rel="stylesheet" href="css/style-new.css">
-
-<!-- ===== НАВИГАЦИЯ ===== -->
-<nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">
-            <span class="nav-rune">ᚱ</span>
-            <span class="nav-name">Scandic</span>
-        </a>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html#worlds" class="nav-link"><span class="rune">☽</span> Миры</a></li>
-            <li><a href="index.html#pantheons" class="nav-link"><span class="rune">⚡</span> Боги</a></li>
-            <li><a href="index.html#runes" class="nav-link"><span class="rune">ᚠ</span> Руны</a></li>
-            <li><a href="index.html#sagas" class="nav-link"><span class="rune">📜</span> Саги</a></li>
-            <li><a href="literature.html" class="nav-link"><span class="rune">📖</span> Литература</a></li>
-            <li><a href="about.html" class="nav-link"><span class="rune">ℹ</span> О проекте</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Меню">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</nav>
-
-<!-- ===== СЕВЕРНОЕ СИЯНИЕ ===== -->
-<div class="aurora-container">
-    <div class="aurora-layer"></div>
-    <div class="aurora-layer"></div>
-    <div class="aurora-layer"></div>
-</div>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О сайте — Скандик</title>
+<meta name="description" content="Что такое «Скандик»: источники, метод проверки фактов, состав авторов и технические принципы. Мифология Скандинавии — без современных фантазий">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Назад к древу</a>
+<header class="nav">
+  <a class="nav__logo" href="index.html">ᛋ <span>Скандик</span></a>
+  <button class="nav__burger" aria-label="Меню">☰</button>
+  <nav class="nav__links">
+    <a href="index.html">Главная</a>
+    <a href="cosmos.html">Космос</a>
+    <a href="realms.html">Девять миров</a>
+    <a href="gods.html">Боги</a>
+    <a href="runes.html">Руны</a>
+    <a href="creatures.html">Существа</a>
+    <a href="eddas.html">Эдды</a>
+    <a href="ragnarok.html">Рагнарёк</a>
+    <a href="vikings.html">Викинги</a>
+    <a href="timeline.html">Хронология</a>
+    <a href="about.html" class="active">О сайте</a>
+  </nav>
+</header>
+<main class="main">
+  <section class="page-head">
+    <h1>О сайте</h1>
+    <p class="page-head__sub">Куда мы смотрели и что взяли: Эдды, камни и саги — без современных фантазий</p>
+  </section>
 
-        <header>
-            <h1>ℹ️ О проекте</h1>
-            <p style="font-size: 1.2em; margin-top: 10px;">Полная интерактивная энциклопедия скандинавской мифологии</p>
-        </header>
-
-        <div class="content-section">
-            <h2>🎯 Миссия проекта</h2>
-            <p>
-                Этот проект был создан с целью сохранения и популяризации древней скандинавской мифологии. 
-                Мы стремимся сделать знания о богах, великанах и героях скандинавского пантеона доступными 
-                для широкой аудитории на русском языке.
-            </p>
-            <p>
-                Скандинавская мифология - это одна из наиболее захватывающих и влиятельных систем верований 
-                древнего мира. Она сыграла огромную роль в формировании культуры викингов, их философии, 
-                морали и представлений о смысле жизни.
-            </p>
-        </div>
-
-        <div class="content-section">
-            <h2>📋 Содержание проекта</h2>
-            
-            <h3>Основные разделы:</h3>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>⚔️ Асы</h4>
-                    <p>Боги Асгарда - верховные божества скандинавского пантеона, включая Одина, Тора и Фрейю</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🌾 Ваны</h4>
-                    <p>Древние боги плодородия и природы, объединённые с асами после войны двух пантеонов</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🧊 Великаны</h4>
-                    <p>Великаны Ётунхейма - враги богов и символы первобытного хаоса</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🐉 Монстры</h4>
-                    <p>Чудовища Рагнарока - Фенрир, Ёрмунганд, Хель и другие враги порядка</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🌳 Космология</h4>
-                    <p>Девять миров, Иггдрасиль, мост Бифрёст и структура вселенной</p>
-                </div>
-                <div class="feature-card">
-                    <h4>📚 Источники</h4>
-                    <p>Подробная информация об Эддах, сагах и других источниках мифологии</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>🌟 Особенности проекта</h2>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="padding: 12px 0; padding-left: 35px; position: relative;">
-                    <span style="position: absolute; left: 0; font-size: 1.2em;">✓</span>
-                    <strong>Полное родословное древо</strong> - все боги, герои и существа систематизированы с указанием родственных связей
-                </li>
-                <li style="padding: 12px 0; padding-left: 35px; position: relative;">
-                    <span style="position: absolute; left: 0; font-size: 1.2em;">✓</span>
-                    <strong>Подробные описания</strong> - для каждого персонажа указаны происхождение, деяния и атрибуты
-                </li>
-                <li style="padding: 12px 0; padding-left: 35px; position: relative;">
-                    <span style="position: absolute; left: 0; font-size: 1.2em;">✓</span>
-                    <strong>Исторические источники</strong> - все информация имеет ссылки на первичные источники (Эдды и саги)
-                </li>
-                <li style="padding: 12px 0; padding-left: 35px; position: relative;">
-                    <span style="position: absolute; left: 0; font-size: 1.2em;">✓</span>
-                    <strong>Красивый интерфейс</strong> - удобная навигация и привлекательный дизайн
-                </li>
-                <li style="padding: 12px 0; padding-left: 35px; position: relative;">
-                    <span style="position: absolute; left: 0; font-size: 1.2em;">✓</span>
-                    <strong>Мобильная адаптивность</strong> - проект хорошо работает на всех устройствах
-                </li>
-                <li style="padding: 12px 0; padding-left: 35px; position: relative;">
-                    <span style="position: absolute; left: 0; font-size: 1.2em;">✓</span>
-                    <strong>Образовательный контент</strong> - идеален для учебных целей и личного развития
-                </li>
-            </ul>
-        </div>
-
-        <div class="content-section">
-            <h2>📖 Источники информации</h2>
-            <p>
-                Все информация в этом проекте основана на древних текстах и современных академических исследованиях:
-            </p>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">📜</span>
-                    Старшая Эдда (Poetic Edda) - IX-XIII века
-                </li>
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">📜</span>
-                    Младшая Эдда (Prose Edda) - Снорри Стурлусон, 1220 г.
-                </li>
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">📜</span>
-                    Королевские саги (Konungasögur)
-                </li>
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">📜</span>
-                    Современные научные труды по скандинавской мифологии
-                </li>
-            </ul>
-        </div>
-
-        <div class="content-section">
-            <h2>👥 Для кого этот проект?</h2>
-            <p>
-                <strong>Студенты и преподаватели:</strong> Отличный ресурс для изучения древней истории и мифологии
-            </p>
-            <p>
-                <strong>Любители истории:</strong> Полная информация о скандинавской культуре и верованиях
-            </p>
-            <p>
-                <strong>Писатели и создатели контента:</strong> Надёжный источник для вдохновения и справочной информации
-            </p>
-            <p>
-                <strong>Любопытные люди:</strong> Интересно узнать больше о древних богах и их истории
-            </p>
-        </div>
-
-        <div class="content-section">
-            <h2>🚀 Развитие проекта</h2>
-            <p>
-                Этот проект постоянно развивается. В планах:
-            </p>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">→</span>
-                    Добавление интерактивного семейного дерева
-                </li>
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">→</span>
-                    Переводы на другие языки
-                </li>
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">→</span>
-                    Видеоматериалы и аудиокниги
-                </li>
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">→</span>
-                    Квизы и интерактивные тесты
-                </li>
-                <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                    <span style="position: absolute; left: 0;">→</span>
-                    Мобильное приложение
-                </li>
-            </ul>
-        </div>
-
-        <footer>
-            <p>© 2024 Скандинавская Мифология - Полное Родословное Древо</p>
-            <p><a href="index.html">Вернуться на главную</a> | <a href="contact.html">Контакты</a></p>
-        </footer>
+  <section class="section">
+    <div class="prose">
+      <h2>Что это за сайт</h2>
+      <blockquote>Я помню древние сказания, / древнее, чем сыны людей.</blockquote>
+      <p style="font-style:italic; color:var(--ink-dim);">— «Прорицание вёльвы», строфа 6</p>
+      <p>«Скандик» — сайт о мифологии Скандинавии, собранный на старых источниках: Эддах, сагах, рунических надписях и находках. Не на пересказах из фантастических книг, не на «интересных фактах» из современных статей, не на домыслах. Если источник говорит — мы приводим источник. Если источник молчит или источники спорят — мы так и пишем.</p>
+      <p>Мифология — не музей и не справочник богов. Это язык, на котором северные народы X века объясняли мир: почему идёт зима, зачем висит солнце, что произойдёт в конце времён. <a href="cosmos.html">Космос</a>, <a href="realms.html">девять миров</a>, <a href="ragnarok.html">последняя битва</a> — всё это не «мифы в смысле выдумки», а древние объяснения, и читать их стоит как древние тексты: со всей серьёзностью.</p>
+      <p>Структура сайта повторяет ход от основ к людям: от <a href="cosmos.html">космоса</a> и <a href="realms.html">миров</a> — к <a href="gods.html">богам</a>, <a href="runes.html">рунам</a> и <a href="creatures.html">существам</a>, затем — к <a href="eddas.html">источникам</a>, которым всё это обязано, и к живым <a href="vikings.html">людям эпохи</a>, верившим во всё это и строившим государства. <a href="timeline.html">Хронология</a> держит мифологическое время в порядке — от пустоты до нового мира.</p>
     </div>
+  </section>
+
+  <div class="ornament">ᛋ</div>
+
+  <section class="section">
+    <div class="prose">
+      <h2>Источники</h2>
+      <p>Основа сайта — два главных корпуса северной традиции. <strong>Старшая, или Поэтическая, Эдда</strong> — сборник песен, записанный в Исландии около 1270 года, но сохранивший устную традицию IX–X веков. <strong>Младшая, или Прозаическая, Эдда</strong> Снорри Стурлусона (около 1220) — учебник скальдов, пересказавший мифы прозой со взглядом человека, который уже жил в христианской стране. К ним добавляются <a href="eddas.html">саги, рунические камни и внешние находки</a>: корабельные курганы, оружие с надписями, крест Госфорта.</p>
+      <p>Каждому утверждению на сайте соответствует свой уровень достоверности: два независимых корпуса — самое твёрдое; один источник или расхождение — живая, но шаткая традиция; интерпретации Снорри — его слова, а не слова древних. Полная шкала с примерами — на странице <a href="eddas.html">«Эдды и источники»</a>.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="prose">
+      <h2>Как мы проверяли</h2>
+      <p>Метод один — <strong>триангуляция</strong>: три вопроса к каждому факту. Что говорят песни? Что говорит Снорри? Есть ли внешнее подтверждение — камень, находка, топоним? Если два из трёх сходятся — факт стоит твёрдо. Если нет — мы помечаем его как одиночный источник или как интерпретацию. Отдельный случай — всё, что относится к <strong>современной реконструкции</strong>: например, <a href="runes.html">става на странице рун</a> — это современная практика, а не древний текст, и на сайте она так и подписана.</p>
+      <p>Ещё одно правило: рунный текст на сайте — только проверенный. Там, где знак стоит украшением, за ним нет «перевода» — мы не выдумываем. Даты и имена на странице <a href="vikings.html">«Викинги»</a> сверены с общепринятой исторической датировкой; там, где датировка колеблется, — колеблется и на сайте, честно.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="prose">
+      <h2>Кто делал</h2>
+      <p>Сайт сделан вдвоём. <strong>Шпиля</strong> — структура, дизайн-система и страницы о космосе, девяти мирах, существах, Эддах, Рагнарёке, викингах и хронологии. <strong>Гаечка</strong> — страницы богов и рун. Под руководством Шефа — владельца проекта, который поставил задачу: сайт готовый, красивый, впечатляющий, полноценный. Его же материал — восемь частей разбора и сводный конспект — лег в основу страниц о рунах и богах.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="prose">
+      <h2>Технически</h2>
+      <p>Статический сайт: разметка, стили и немного чистого скрипта для меню. Без внешних зависимостей — никаких чужих шрифтов, картинок и счётчиков: весь орнамент нарисован прямо в страницах, и всё это работает без сети. Весь текст — на русском языке.</p>
+    </div>
+  </section>
+</main>
+<footer class="footer">Скандик · мифология Скандинавии · 2026</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
