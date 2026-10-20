@@ -28,3 +28,15 @@
 | 23.08.2026 02:15 | Гаечка (сама, T5c) | T5b/T5c: 3 аборта Чипа (OPENCLAW_DIRECT_ABORT, GPU kingjones777) — делаю сама | fix_img_refs.py (алгоритм: путь → транслит → плейсхолдер; баг: жадный regex ловил src в onerror → нежадный), avatar-default.svg (стиль loki.svg, руна ᚱ). Факт: 4 пути + 6 транслит + 86 плейсхолдер = 96 | ✅ коммит 4be02ba, missing img src: 0, verify: 0 битых, идемпотентно |
 | 23.08.2026 02:20 | Гаечка (сама, T6) | T6: README устарел (170+→233, 46 SVG→67+2 WebP, пути, структура) | Обновлены: счётчики, структура проекта (+events/24, +runes/35, +sitemap.xml), запуск (~/Projects/scandic), footer | ✅ |
 | 23.08.2026 02:20 | Гаечка (сама, T7) | T7: .gitignore только .eddass/, 5 мёртвых дублей-скриптов, мусор scandic-zip-extract | .gitignore: +.DS_Store, *.log, backup_*; 5 скриптов (fix_links, fix_all_links, fix_broken_links, fix_nav_links, verify_links) → scripts/archive/; scandic-zip-extract → ~/.trash/20260823/ | ✅ |
+
+## Восстановление наполнения (20.10.2026, Чип, ветка restore-content → main)
+
+| Время | Агент | Действие | Результат |
+|-------|-------|----------|-----------|
+| 20.10 21:18 | Чип | Аудит: после редизайна 08.10 ~210 страниц осиротели, sitemap мёртв | план `Chip_plan.md`, решения Шефа: Р1=(а) всё в навигацию, Р2=обернуть все, Р3=v2/host диагностировать в конце |
+| 20.10 21:2x | Чип | restyle_wrap.py: обёртка family/world/events/runes (226) + contact/literature/myths в новый дизайн | пути не менялись; починены href `family/x.html`; CSS additions (crumbs/entity-hero/prose-list) |
+| 20.10 21:3x | Чип | build_catalogs.py: entities.html (160 карточек), сетки world/events в realms/timeline, creatures→указатель | идемпотентно через маркеры RESTORED-CATALOG |
+| 20.10 21:3x | Чип | runes.html: 22 rune-box → ссылки; ручная карта BOX2FILE (старый генератор путал глифы/имена; Кеназ/Беркана файлов нет) | глифы на страницах поправлены по боксам |
+| 20.10 21:5x | Чип | Обнаружено: 86 SVG — медальоны-плейсхолдеры августа; реальные SD-арты id001–039 удалены T5 «сиротами» в cf8f1e6 | restore_sd_images.py: 38 webp извлечены из истории, связаны по ИМЕНАМ PNG (CSV entities-table рассинхронизирован — не доверять!) |
+| 20.10 22:0x | Чип | Иггдрасиль, Хельхейм написаны заново (страницы были пустые — битая кавычка съедала контент); world-unknown удалён (пустышка) | ~/.trash/20261020/ |
+| 20.10 22:2x | Чип | Финал: 249 стр., 0 битых ссылок (href+src), style-new.css удалён, .bak убраны, sitemap 249 URL, nav «Энциклопедия» везде | скриншоты chromium-headless: вёрстка чистая |
