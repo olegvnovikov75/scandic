@@ -523,3 +523,22 @@ table.table tbody tr:hover, .prose table tbody tr:hover { background: rgba(201, 
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ===== Восстановленные страницы (restyle_wrap.py, 20.10.2026) ===== */
+.crumbs { max-width: 72ch; margin: 0 auto; padding: 1.4rem 1.4rem 0;
+  font-size: .85rem; letter-spacing: .08em; color: var(--ink-dim); }
+.crumbs a { color: var(--ink-dim); text-decoration: none;
+  border-bottom: 1px dotted rgba(201,162,39,.45); }
+.crumbs a:hover { color: var(--gold); }
+.entity-hero__img { display: block; margin: 0 auto 1.6rem;
+  width: clamp(120px, 22vw, 190px); height: auto;
+  filter: drop-shadow(0 10px 26px rgba(0,0,0,.55)); }
+.prose ul li, .prose ol li { margin: .35em 0; line-height: 1.7; }
+.prose a { color: var(--gold-soft, var(--gold)); text-decoration: none;
+  border-bottom: 1px solid rgba(201,162,39,.35); }
+.prose a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* плотнее шапка восстановленных страниц (20.10) */
+.entity-hero { padding-top: clamp(2.2rem, 5vw, 3.2rem); padding-bottom: clamp(1rem, 2.5vw, 1.8rem); }
+.entity-hero .god-hero__epithets { margin-top: .8rem; }
+.god-hero.entity-hero h1 { font-size: clamp(2.4rem, 6.5vw, 4.2rem); }
