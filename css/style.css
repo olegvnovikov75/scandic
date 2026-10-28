@@ -577,3 +577,4 @@ a.entity-link:hover, a.entity-link:focus {
 .crosslink{margin:40px 0 6px;border:1px dashed var(--line);border-radius:14px;padding:18px 22px;background:rgba(201,162,39,.06)}
 .crosslink h3{color:var(--gold);font-size:16px;margin-bottom:10px}
 .crosslink a{display:inline-block;margin:0 16px 6px 0}
+.hero__alias{margin:6px 0 0;font-size:15px;font-style:italic;color:var(--muted,#9a8f7a);letter-spacing:.02em}
