@@ -569,3 +569,11 @@ a.entity-link:hover, a.entity-link:focus {
 .hero-photo figcaption { font-size: .85rem; color: var(--ink-dim, #9aa7b8);
   text-align: center; margin-top: .45rem; line-height: 1.5; }
 .hero-photo figcaption a { color: inherit; }
+
+.nav__sister{color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:3px 12px;white-space:nowrap;align-self:center}
+.nav__sister:hover{background:rgba(201,162,39,.12)}
+.hero__sister{margin-top:14px}
+.hero__sister a{color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:6px 16px;display:inline-block;font-size:15px}
+.crosslink{margin:40px 0 6px;border:1px dashed var(--line);border-radius:14px;padding:18px 22px;background:rgba(201,162,39,.06)}
+.crosslink h3{color:var(--gold);font-size:16px;margin-bottom:10px}
+.crosslink a{display:inline-block;margin:0 16px 6px 0}
