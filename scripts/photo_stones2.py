@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Скандик: фото рунных камней через прямой поиск Commons (запасной путь, когда en-wiki лид молчит)."""
-import os, re, time, urllib.parse, urllib.request, html as H
+import json, os, re, time, urllib.parse, urllib.request, html as H
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMGD = os.path.join(ROOT, 'images', 'stones')
